@@ -1062,7 +1062,7 @@ nav.wrap {
 }
 
 .social-card .ic {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     margin-bottom: 8px;
     color: var(--gold-soft);
 }
@@ -1271,6 +1271,7 @@ footer .tag {
     justify-content: center;
     transition: .3s;
     color: var(--gold-soft);
+    font-size: 1.15rem;
 }
 
 .footer-social a:hover {
