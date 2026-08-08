@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Vashu — TheMeloFY | Singer • Composer • Music Producer</title>
+    <meta name="description"
+        content="Learn more about Vashu — Singer, Composer, Songwriter and Music Producer from Varanasi, India. Discover his journey and passion for music.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+    <header id="siteHeader" class="scrolled">
+        <nav class="wrap">
+            <a href="index.html" class="logo">The<span class="dot">Melo</span>FY</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book Now</a>
+            <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="page-header">
+        <div class="wrap">
+            <div class="eyebrow">The Artist</div>
+            <h1 class="section-title">About <em>Vashu</em></h1>
+            <p class="section-sub" style="margin: 0 auto;">"Where Melody Meets Soul" — Transforming raw human emotions into timeless soundscapes.</p>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about" style="padding-top: 40px;">
+        <div class="wrap about-grid">
+            <div class="about-text reveal">
+                <h2 class="section-title" style="font-size: 2.2rem;">Crafting Music From The <em>Heart & Soul</em></h2>
+                <p>Vashu is an independent artist, singer, composer, songwriter and music producer based in Varanasi, India, who transforms emotions into melodies.</p>
+                <p>With creativity, passion and dedication, Vashu creates original music, live performances and professional music productions across different genres — bringing every story to life through sound.</p>
+                <p>Whether performing live on stage or composing intricate arrangements in the studio, Vashu's mission is to create authentic musical experiences that resonate deeply with audiences around the globe.</p>
+
+                <div class="about-stats">
+                    <div><b>8+</b><span>Genres Explored</span></div>
+                    <div><b>100%</b><span>Independent Artist</span></div>
+                    <div><b>360°</b><span>Music Production</span></div>
+                </div>
+
+                <div style="margin-top: 40px; display:flex; gap:16px; flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn-gold">Book Vashu Live</a>
+                    <a href="portfolio.html" class="btn btn-outline">Explore Work</a>
+                </div>
+            </div>
+
+            <div class="profile-card reveal">
+                <div class="profile-inner">
+                    <div class="vinyl"></div>
+                    <h3>VASHU</h3>
+                    <span class="role">Indie Artist • Songwriter • Music Producer</span>
+                    <div class="profile-badges">
+                        <span>Singer</span><span>Composer</span><span>Producer</span><span>Songwriter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="wrap">
+            <a href="index.html" class="logo">The<span class="dot">Melo</span>FY</a>
+            <p class="tag">"Let's Create Memories Through Music"</p>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
+                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="totop" id="toTop">↑</div>
+
+    <script>
+        const header = document.getElementById('siteHeader');
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            toTop.classList.toggle('show', window.scrollY > 400);
+        });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach((el, i) => {
+            el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
+            io.observe(el);
+        });
+    </script>
+</body>
+
+</html>
