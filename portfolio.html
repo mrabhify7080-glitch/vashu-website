@@ -34,6 +34,7 @@
             <div class="burger" id="burger"><span></span><span></span><span></span></div>
         </nav>
     </header>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- ================= PAGE HEADER ================= -->
     <section class="page-header">
@@ -130,11 +131,19 @@
 
         const burger = document.getElementById('burger');
         const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-        });
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleNav(open) {
+            const isOpen = open !== undefined ? open : !navLinks.classList.contains('open');
+            navLinks.classList.toggle('open', isOpen);
+            burger.classList.toggle('open', isOpen);
+            if (navOverlay) navOverlay.classList.toggle('open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        burger.addEventListener('click', () => toggleNav());
+        if (navOverlay) navOverlay.addEventListener('click', () => toggleNav(false));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
 
         // Portfolio filter
         const tabs = document.querySelectorAll('.pf-tab');
