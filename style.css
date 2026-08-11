@@ -222,18 +222,19 @@ nav.wrap {
 
 .nav-links {
     display: flex;
-    gap: 42px;
+    gap: 16px;
     align-items: center;
 }
 
 .nav-links a {
-    font-size: .82rem;
-    letter-spacing: .14em;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 500;
     color: var(--text-soft);
     position: relative;
     padding: 4px 0;
+    white-space: nowrap;
     transition: color .3s;
 }
 
@@ -260,13 +261,15 @@ nav.wrap {
 
 .nav-cta {
     border: 1px solid var(--gold);
-    padding: 10px 24px;
+    padding: 8px 20px;
     border-radius: 2px;
-    font-size: .76rem;
-    letter-spacing: .16em;
+    font-size: .74rem;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--gold);
+    white-space: nowrap;
     transition: all .35s;
+    flex-shrink: 0;
 }
 
 .nav-cta:hover {
@@ -290,23 +293,31 @@ nav.wrap {
     transition: .3s;
 }
 
-@media(max-width:960px) {
+@media(max-width: 1150px) {
     .nav-links {
         position: fixed;
         inset: 0 0 0 auto;
-        width: 78%;
+        width: 82%;
         max-width: 340px;
         background: #02040f;
         flex-direction: column;
-        justify-content: center;
-        gap: 32px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 90px 24px 40px;
+        gap: 22px;
         transform: translateX(100%);
         transition: transform .5s cubic-bezier(.77, 0, .18, 1);
         border-left: 1px solid var(--glass-border);
+        overflow-y: auto;
     }
 
     .nav-links.open {
         transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
     }
 
     .nav-cta {
@@ -1335,16 +1346,6 @@ footer .tag {
    EXPANDED COMPONENTS & NEW PAGES STYLES
    ========================================================================== */
 
-/* Navbar responsive adjustments for expanded pages */
-.nav-links {
-    gap: 18px !important;
-}
-.nav-links a {
-    font-size: 0.85rem !important;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-}
-
 /* Timeline Component (About Page) */
 .timeline-wrap {
     position: relative;
@@ -1958,12 +1959,79 @@ footer .tag {
     color: var(--text-soft);
 }
 
-@media (max-width: 992px) {
-    .nav-links {
-        gap: 12px !important;
+/* ==========================================================================
+   ALIGNMENT & ARRANGEMENT POLISH (RESPONSIVE & GRID UNIFORMITY)
+   ========================================================================== */
+
+/* Universal grid card alignment */
+.music-showcase-grid,
+.case-study-grid,
+.blog-grid,
+.testimonials-grid,
+.process-grid,
+.epk-stat-grid,
+.asset-download-grid {
+    align-items: stretch;
+}
+
+.track-card,
+.case-study-card,
+.blog-card,
+.testimonial-card,
+.process-card,
+.timeline-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Section title & eyebrow center alignment defaults */
+.section-header-center {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+}
+.section-header-center .eyebrow {
+    justify-content: center;
+}
+
+/* Footer layout alignment */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 24px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+    nav.wrap {
+        padding: 0 20px;
     }
-    .nav-links a {
-        font-size: 0.8rem !important;
+    .hero-name {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+    }
+    .hero-role {
+        font-size: 0.85rem;
+    }
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+    .hero-ctas .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .timeline-wrap {
+        padding-left: 20px;
+    }
+    .timeline-item::before {
+        left: -29px;
     }
 }
 
