@@ -2196,11 +2196,66 @@ footer .tag {
     100% { height: 100%; }
 }
 
-@media (max-width: 600px) {
-    .global-audio-bar {
-        bottom: 16px;
-        padding: 8px 16px;
-        gap: 12px;
-    }
+/* ==========================================================================
+   WHATSAPP BUTTON & FLOATING CHAT STYLES (GREEN #25D366)
+   ========================================================================== */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #25D366 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 10px;
+}
+.whatsapp-btn:hover {
+    background: #1eb956 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+    color: #ffffff !important;
+}
+.whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
+
+/* Floating WhatsApp quick chat button on left bottom */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1050;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #25D366 !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #1eb956 !important;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.7);
+}
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
 }
 
