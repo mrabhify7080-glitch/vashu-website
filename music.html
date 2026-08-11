@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music & Genres — TheMeloFY | VASHU</title>
+    <title>Music & Compositions — Vashu | TheMeloFY</title>
     <meta name="description"
-        content="Explore the music genres and production soundscapes of Vashu — Bollywood, Rock, Pop, Sufi, Classical, Semi-Classical, Folk & Indie.">
+        content="Explore Vashu's discography — Original Sufi Pop singles, Indie Folk Fusion, Acoustic Romance, and Rock Ballads. Stream tracks, read song stories and lyrics.">
+    <meta property="og:title" content="Music & Compositions — Vashu | TheMeloFY">
+    <meta property="og:description" content="Explore Vashu's discography — Original Sufi Pop, Indie Folk Fusion, and Acoustic Ballads.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,6 +29,10 @@
                 <li><a href="music.html" class="active">Music</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="presskit.html">EPK</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <a href="contact.html" class="nav-cta">Book Now</a>
@@ -37,74 +43,204 @@
     <!-- ================= PAGE HEADER ================= -->
     <section class="page-header">
         <div class="wrap">
-            <div class="eyebrow">Sound &amp; Style</div>
-            <h1 class="section-title">Music <em>Genres</em></h1>
-            <p class="section-sub" style="margin: 0 auto;">A versatile sound built across traditions and trends — every genre, one soulful signature.</p>
+            <div class="eyebrow">Discography &amp; Releases</div>
+            <h1 class="section-title">Original <em>Music</em></h1>
+            <p class="section-sub" style="margin: 0 auto;">Every track tells a story. Immerse yourself in Vashu's signature soundscapes across genres.</p>
         </div>
     </section>
 
-    <!-- ================= GENRES GRID ================= -->
-    <section style="padding-top: 20px;">
+    <!-- ================= MUSIC SHOWCASE ================= -->
+    <section style="padding: 50px 0 90px;">
         <div class="wrap">
-            <div class="genre-grid">
-                <div class="genre-card reveal"><span class="ic">🎵</span>
-                    <h4>Bollywood</h4>
+            <!-- Genre Filter Tabs -->
+            <div class="gallery-filters reveal">
+                <button class="filter-btn active" onclick="filterMusic('all')">All Releases</button>
+                <button class="filter-btn" onclick="filterMusic('sufi')">Sufi &amp; Devotional</button>
+                <button class="filter-btn" onclick="filterMusic('pop')">Pop &amp; Acoustic</button>
+                <button class="filter-btn" onclick="filterMusic('rock')">Rock &amp; Metal</button>
+                <button class="filter-btn" onclick="filterMusic('fusion')">Folk Fusion</button>
+            </div>
+
+            <!-- Music Cards Grid -->
+            <div class="music-showcase-grid">
+
+                <!-- Track 1 -->
+                <div class="track-card reveal" data-genre="sufi">
+                    <div>
+                        <div class="track-header">
+                            <span class="track-tag">Sufi Pop Fusion</span>
+                            <span class="track-date">Released: Jan 2026</span>
+                        </div>
+                        <h3 class="track-title">Ruhaniyat (रूहानियत)</h3>
+                        <p class="track-story">Composed late at night in Vashu's Banaras studio, <em>Ruhaniyat</em> explores spiritual longing and unrequited soul connection. Melding traditional harmonium notes with ambient pad textures and soaring vocal alaps, this track has become a fan-favorite for quiet reflection.</p>
+                    </div>
+
+                    <div>
+                        <div class="track-player">
+                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Ruhaniyat">▶</button>
+                            <div class="waveform-container">
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="track-footer">
+                            <div class="track-links">
+                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
+                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
+                            </div>
+                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Ruhaniyat', 'तेरे इश्क़ की रूहानियत में बह गया दिल...\nहर सांस में तेरा नाम, हर धड़कन में तेरी बात।\nबनारस की शामों सा सुहाना ये समां,\nतेरी यादों से महका ये मेरा जहां।')">Lyrics 📜</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎸</span>
-                    <h4>Rock &amp; Metal</h4>
+
+                <!-- Track 2 -->
+                <div class="track-card reveal" data-genre="fusion">
+                    <div>
+                        <div class="track-header">
+                            <span class="track-tag">Indie Folk Fusion</span>
+                            <span class="track-date">Released: Nov 2025</span>
+                        </div>
+                        <h3 class="track-title">Banaras Beats (बनारस बीट्स)</h3>
+                        <p class="track-story">A tribute to Vashu's hometown, combining rhythm patterns sampled directly from the Assi Ghat morning aarti with acoustic guitar arpeggios and modern basslines. <em>Banaras Beats</em> brings the mystic energy of the ancient city into contemporary streaming playlists.</p>
+                    </div>
+
+                    <div>
+                        <div class="track-player">
+                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Banaras Beats">▶</button>
+                            <div class="waveform-container">
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="track-footer">
+                            <div class="track-links">
+                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
+                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
+                            </div>
+                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Banaras Beats', 'घाटों की गूंज में, गंगा की मौजों में...\nबसा है संगीत, मेरी हर सोच में।\nबनारस की गलियां गाती हैं तराना,\nमस्त मलंग हुआ ये दिल परवाना।')">Lyrics 📜</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎤</span>
-                    <h4>Pop</h4>
+
+                <!-- Track 3 -->
+                <div class="track-card reveal" data-genre="pop">
+                    <div>
+                        <div class="track-header">
+                            <span class="track-tag">Acoustic Pop Romance</span>
+                            <span class="track-date">Released: Aug 2025</span>
+                        </div>
+                        <h3 class="track-title">Pehli Baarish (पहली बारिश)</h3>
+                        <p class="track-story">A warm acoustic ballade evoking the smell of petrichor and nostalgic first rain moments. Featuring layered string harmonies, subtle percussive shakers, and intimate vocal delivery, <em>Pehli Baarish</em> has resonated strongly with lovers of romantic unplugged melodies.</p>
+                    </div>
+
+                    <div>
+                        <div class="track-player">
+                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Pehli Baarish">▶</button>
+                            <div class="waveform-container">
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="track-footer">
+                            <div class="track-links">
+                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
+                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
+                            </div>
+                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Pehli Baarish', 'पहली बारिश की बूंदों सा तेरा अहसास,\nजब भी तू होती है मेरे दिल के पास।\nभीग जाने दो इस इश्क़ की राहों में,\nसो जाने दो तेरी हिफ़ाज़त की बाहों में।')">Lyrics 📜</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🌙</span>
-                    <h4>Sufi</h4>
+
+                <!-- Track 4 -->
+                <div class="track-card reveal" data-genre="rock">
+                    <div>
+                        <div class="track-header">
+                            <span class="track-tag">Rock &amp; Metal Anthem</span>
+                            <span class="track-date">Released: May 2025</span>
+                        </div>
+                        <h3 class="track-title">Aagahi (आगाही - The Awakening)</h3>
+                        <p class="track-story">Demonstrating Vashu's vocal power and range, <em>Aagahi</em> is a heavy rock anthem driven by distorted guitar riffs, thunderous drum fills, and soaring high octave belts. Written as a call for self-realization and overcoming inner struggles.</p>
+                    </div>
+
+                    <div>
+                        <div class="track-player">
+                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Aagahi">▶</button>
+                            <div class="waveform-container">
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="track-footer">
+                            <div class="track-links">
+                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
+                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
+                            </div>
+                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Aagahi', 'तू उठ, तू जाग, ये समां तेरा है!\nतूफ़ानों से टकराना ही काम तेरा है।\nअंधेरों को चीर कर रौशनी लाएगा,\nतभी तो तू आगाही की मिसाल बनाएगा!')">Lyrics 📜</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎻</span>
-                    <h4>Classical</h4>
+
+                <!-- Track 5 -->
+                <div class="track-card reveal" data-genre="pop">
+                    <div>
+                        <div class="track-header">
+                            <span class="track-tag">Bollywood Reimagined</span>
+                            <span class="track-date">Released: Mar 2025</span>
+                        </div>
+                        <h3 class="track-title">Tum Ho Pass (Acoustic Redux)</h3>
+                        <p class="track-story">A soulful acoustic cover and re-imagination of iconic Bollywood melodies, crafted with nylon string guitars, ambient violin overlays, and soft falsetto vocals. A staple highlight of Vashu's unplugged live show setlists.</p>
+                    </div>
+
+                    <div>
+                        <div class="track-player">
+                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Tum Ho Pass">▶</button>
+                            <div class="waveform-container">
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="track-footer">
+                            <div class="track-links">
+                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
+                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
+                            </div>
+                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Tum Ho Pass', 'तुम हो पास तो सब कुछ हसीन है...\nइस दिल को तुझ पर ही यक़ीन है।\nगूंजती है तेरी धड़कन मेरी रूह में,\nजैसे कोई दुआ बसी हो सुजूद में।')">Lyrics 📜</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎼</span>
-                    <h4>Semi Classical</h4>
-                </div>
-                <div class="genre-card reveal"><span class="ic">🌿</span>
-                    <h4>Folk</h4>
-                </div>
-                <div class="genre-card reveal"><span class="ic">🎧</span>
-                    <h4>Indie</h4>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ================= MUSIC PRODUCTION OVERVIEW ================= -->
-    <section class="services">
-        <div class="wrap">
-            <div class="reveal" style="text-align:center;">
-                <div class="eyebrow" style="justify-content:center;">Behind The Sound</div>
-                <h2 class="section-title">Music <em>Production</em></h2>
-                <p class="section-sub" style="margin:0 auto;">Complete production services for artists, brands and creators.</p>
-            </div>
-            <div class="prod-grid reveal">
-                <div class="prod-cell"><span class="n">01</span>
-                    <h4>Album Production</h4>
-                </div>
-                <div class="prod-cell"><span class="n">02</span>
-                    <h4>Jingle Composition</h4>
-                </div>
-                <div class="prod-cell"><span class="n">03</span>
-                    <h4>Cover Songs</h4>
-                </div>
-                <div class="prod-cell"><span class="n">04</span>
-                    <h4>YouTube Music Videos</h4>
-                </div>
-                <div class="prod-cell" style="grid-column:1/-1;max-width:340px;margin:0 auto;"><span class="n">05</span>
-                    <h4>Podcast Music</h4>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top:50px;">
-                <a href="portfolio.html" class="btn btn-gold">Listen To Tracks in Portfolio →</a>
-            </div>
+    <!-- ================= LYRICS MODAL ================= -->
+    <div class="lightbox-modal" id="lyricsModal">
+        <div class="lightbox-content" style="max-width: 600px; background: var(--navy-deep); padding: 40px; border-radius: 16px; border: 1px solid var(--gold); text-align: left;">
+            <span class="lightbox-close" onclick="closeLyrics()">&times;</span>
+            <h3 id="lyricsTitle" style="color: var(--gold); font-size: 1.6rem; margin-bottom: 20px;">Track Title</h3>
+            <pre id="lyricsBody" style="white-space: pre-wrap; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: var(--white); line-height: 1.8; opacity: 0.9;"></pre>
         </div>
-    </section>
+    </div>
 
     <!-- ================= FOOTER ================= -->
     <footer>
@@ -118,7 +254,8 @@
             </div>
             <div class="footer-nav">
                 <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a><a href="testimonials.html">Reviews</a><a href="presskit.html">EPK</a><a href="contact.html">Contact</a>
             </div>
             <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
         </div>
@@ -155,6 +292,49 @@
             el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
             io.observe(el);
         });
+
+        // Filter music tracks
+        function filterMusic(category) {
+            const buttons = document.querySelectorAll('.gallery-filters .filter-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.track-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.genre === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle play simulation
+        function togglePlay(btn) {
+            const card = btn.closest('.track-card');
+            const isPlaying = card.classList.contains('playing');
+            
+            document.querySelectorAll('.track-card').forEach(c => {
+                c.classList.remove('playing');
+                c.querySelector('.play-btn').textContent = '▶';
+            });
+
+            if (!isPlaying) {
+                card.classList.add('playing');
+                btn.textContent = '⏸';
+            }
+        }
+
+        // Lyrics modal
+        function showLyrics(title, text) {
+            document.getElementById('lyricsTitle').textContent = title;
+            document.getElementById('lyricsBody').textContent = text;
+            document.getElementById('lyricsModal').classList.add('active');
+        }
+
+        function closeLyrics() {
+            document.getElementById('lyricsModal').classList.remove('active');
+        }
     </script>
 </body>
 
