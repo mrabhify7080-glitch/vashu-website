@@ -311,7 +311,7 @@
         });
         navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-        // Hero equalizer bars
+        // Hero equalizer bars (Slow Motion)
         const heroBars = document.getElementById('heroBars');
         if (heroBars) {
             const barCount = 60;
@@ -319,8 +319,8 @@
                 const s = document.createElement('span');
                 const h = 20 + Math.random() * 80;
                 s.style.setProperty('--h', h + '%');
-                s.style.animationDelay = (Math.random() * 2) + 's';
-                s.style.animationDuration = (1.6 + Math.random() * 1.6) + 's';
+                s.style.animationDelay = (Math.random() * 3.5) + 's';
+                s.style.animationDuration = (3.5 + Math.random() * 3.5) + 's';
                 heroBars.appendChild(s);
             }
         }

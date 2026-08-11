@@ -393,18 +393,16 @@ nav.wrap {
     width: clamp(3px, .6vw, 7px);
     background: linear-gradient(180deg, var(--gold-soft), var(--gold) 40%, transparent);
     border-radius: 3px 3px 0 0;
-    animation: barpulse 2.4s ease-in-out infinite;
+    animation: barpulse 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
 
 @keyframes barpulse {
-
-    0%,
-    100% {
-        height: 8%;
+    0% {
+        height: 6%;
     }
 
-    50% {
-        height: var(--h, 70%);
+    100% {
+        height: var(--h, 75%);
     }
 }
 
