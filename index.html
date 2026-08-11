@@ -39,6 +39,7 @@
 
     <!-- ================= HERO ================= -->
     <section class="hero" id="home">
+        <div class="hero-bars" id="heroBars"></div>
         <div class="hero-content">
             <div class="hero-kicker">TheMeloFY Presents</div>
             <h1 class="hero-name">VASHU</h1>
@@ -301,7 +302,19 @@
             navLinks.classList.toggle('open');
             burger.classList.toggle('open');
         });
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+        // Hero equalizer bars (Slow Motion)
+        const heroBars = document.getElementById('heroBars');
+        if (heroBars) {
+            const barCount = 60;
+            for (let i = 0; i < barCount; i++) {
+                const s = document.createElement('span');
+                const h = 20 + Math.random() * 80;
+                s.style.setProperty('--h', h + '%');
+                s.style.animationDelay = (Math.random() * 3.5) + 's';
+                s.style.animationDuration = (3.5 + Math.random() * 3.5) + 's';
+                heroBars.appendChild(s);
+            }
+        }
 
         // Scroll reveal
         const revealEls = document.querySelectorAll('.reveal');
