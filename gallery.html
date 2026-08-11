@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo & Video Gallery — Vashu | Live Shows, Studio & Events</title>
+    <meta name="description"
+        content="Browse official photos and performance moments of Vashu — Live Stage Concerts, Studio Recording sessions, Destination Weddings, and Behind-The-Scenes visuals.">
+    <meta property="og:title" content="Photo & Video Gallery — Vashu | Live Shows & Studio">
+    <meta property="og:description" content="Browse official performance photos, studio sessions, and live concert moments of Vashu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+    <header id="siteHeader" class="scrolled">
+        <nav class="wrap">
+            <a href="index.html" class="logo">The<span class="dot">Melo</span>FY</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="presskit.html">EPK</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book Now</a>
+            <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="page-header">
+        <div class="wrap">
+            <div class="eyebrow">Visual Experience</div>
+            <h1 class="section-title">Photo <em>Gallery</em></h1>
+            <p class="section-sub" style="margin: 0 auto;">Captured moments from stage performances, studio sessions, and memorable events.</p>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY SECTION ================= -->
+    <section style="padding: 50px 0 90px;">
+        <div class="wrap">
+            <!-- Filter Tabs -->
+            <div class="gallery-filters reveal">
+                <button class="filter-btn active" onclick="filterGallery('all')">All Photos</button>
+                <button class="filter-btn" onclick="filterGallery('live')">Live Shows</button>
+                <button class="filter-btn" onclick="filterGallery('studio')">Studio Sessions</button>
+                <button class="filter-btn" onclick="filterGallery('events')">Weddings &amp; Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+
+                <div class="gallery-item reveal" data-cat="live" onclick="openLightbox('vashu-profile.jpg', 'Live Concert Stage — Performing acoustic fusion set for college fest crowd')">
+                    <img src="vashu-profile.jpg" alt="Vashu Performing Live on Stage">
+                    <div class="gallery-overlay">
+                        <h5>Stage Acoustic Set</h5>
+                        <span>Live Concert • College Fest</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-cat="studio" onclick="openLightbox('vashu-profile.jpg', 'TheMeloFY Studio — Recording vocal harmonies & acoustic guitars for new single')">
+                    <img src="vashu-profile.jpg" alt="Vashu in Studio Session">
+                    <div class="gallery-overlay">
+                        <h5>Studio Vocal Recording</h5>
+                        <span>TheMeloFY Studio • Single Sessions</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-cat="events" onclick="openLightbox('vashu-profile.jpg', 'Udaipur Palace — Sufi Night performance at destination wedding')">
+                    <img src="vashu-profile.jpg" alt="Vashu at Destination Wedding Event">
+                    <div class="gallery-overlay">
+                        <h5>Udaipur Destination Wedding</h5>
+                        <span>Palace Sufi Night • Rajasthan</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-cat="live" onclick="openLightbox('vashu-profile.jpg', 'Delhi Corporate Gala — High energy rock & pop performance')">
+                    <img src="vashu-profile.jpg" alt="Vashu Corporate Performance">
+                    <div class="gallery-overlay">
+                        <h5>Corporate Annual Gala</h5>
+                        <span>New Delhi • Corporate Show</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-cat="studio" onclick="openLightbox('vashu-profile.jpg', 'Mixing Console & DAW — Audio mastering setup at studio')">
+                    <img src="vashu-profile.jpg" alt="Vashu Audio Mixing Console">
+                    <div class="gallery-overlay">
+                        <h5>Audio Mixing &amp; Mastering</h5>
+                        <span>DAW Production • Scoring</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-cat="events" onclick="openLightbox('vashu-profile.jpg', 'Intimate Cocktail Evening — Unplugged guitar & vocal session')">
+                    <img src="vashu-profile.jpg" alt="Vashu Unplugged Session">
+                    <div class="gallery-overlay">
+                        <h5>VIP Unplugged Session</h5>
+                        <span>Private Cocktail Night</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LIGHTBOX MODAL ================= -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImg" src="" alt="Enlarged gallery photo">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="wrap">
+            <a href="index.html" class="logo">The<span class="dot">Melo</span>FY</a>
+            <p class="tag">"Let's Create Memories Through Music"</p>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
+                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a><a href="testimonials.html">Reviews</a><a href="presskit.html">EPK</a><a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="totop" id="toTop">↑</div>
+
+    <script>
+        const header = document.getElementById('siteHeader');
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            toTop.classList.toggle('show', window.scrollY > 400);
+        });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach((el, i) => {
+            el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
+            io.observe(el);
+        });
+
+        // Gallery Filter
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.gallery-filters .filter-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.cat === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox functions
+        function openLightbox(imgSrc, caption) {
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxCaption').textContent = caption;
+            document.getElementById('lightboxModal').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
