@@ -206,6 +206,8 @@ nav.wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
+    position: relative;
 }
 
 .logo {
@@ -214,6 +216,8 @@ nav.wrap {
     font-weight: 800;
     letter-spacing: .05em;
     display: inline-block;
+    margin-right: 28px;
+    flex-shrink: 0;
 }
 
 .logo .dot {
@@ -222,18 +226,19 @@ nav.wrap {
 
 .nav-links {
     display: flex;
-    gap: 16px;
+    gap: 22px;
     align-items: center;
+    margin: 0 auto;
 }
 
 .nav-links a {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 500;
     color: var(--text-soft);
     position: relative;
-    padding: 4px 0;
+    padding: 6px 0;
     white-space: nowrap;
     transition: color .3s;
 }
@@ -326,6 +331,31 @@ nav.wrap {
 
     .burger {
         display: flex;
+    }
+
+    .nav-item-dropdown {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--glass-border);
+        box-shadow: none;
+        padding: 6px 0;
+        margin-top: 8px;
+        width: 100%;
+        min-width: 0;
+    }
+    
+    .dropdown-menu a {
+        text-align: center;
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
     }
 }
 
@@ -2070,7 +2100,8 @@ footer .tag {
 /* Desktop Dropdown Navigation */
 .nav-item-dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 .dropdown-trigger {
     cursor: pointer;
@@ -2079,36 +2110,38 @@ footer .tag {
     gap: 4px;
 }
 .dropdown-menu {
+    display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 12px);
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: rgba(5, 11, 36, 0.95);
-    backdrop-filter: blur(20px);
+    transform: translateX(-50%);
+    background: #050b24;
     border: 1px solid var(--glass-border);
     border-radius: 12px;
-    padding: 12px 0;
-    min-width: 180px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1200;
+    padding: 10px 0;
+    min-width: 190px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9);
+    z-index: 99999;
 }
 .nav-item-dropdown:hover .dropdown-menu {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
+    display: flex;
+    flex-direction: column;
 }
 .dropdown-menu a {
-    display: block;
-    padding: 8px 20px;
-    font-size: 0.8rem !important;
+    display: block !important;
+    padding: 10px 20px !important;
+    font-size: 0.78rem !important;
     color: var(--white) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap !important;
     transition: background 0.2s ease, color 0.2s ease;
 }
+.dropdown-menu a::after {
+    display: none !important;
+}
 .dropdown-menu a:hover {
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(212, 175, 55, 0.15) !important;
     color: var(--gold-soft) !important;
 }
 
