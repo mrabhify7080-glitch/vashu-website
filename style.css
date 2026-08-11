@@ -193,14 +193,12 @@ header {
     z-index: 1000;
     padding: 22px 0;
     transition: all .4s ease;
-    background: linear-gradient(180deg, rgba(2, 4, 15, .92), transparent);
+    background: #02040f;
 }
 
 header.scrolled {
     padding: 14px 0;
-    background: rgba(5, 11, 36, .92);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: #050b24;
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -298,8 +296,7 @@ nav.wrap {
         inset: 0 0 0 auto;
         width: 78%;
         max-width: 340px;
-        background: rgba(2, 4, 15, .97);
-        backdrop-filter: blur(20px);
+        background: #02040f;
         flex-direction: column;
         justify-content: center;
         gap: 32px;
