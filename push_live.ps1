@@ -4,7 +4,7 @@ param (
 
 $gh = "C:\Users\ASUS\AppData\Local\Microsoft\WinGet\Packages\GitHub.cli_Microsoft.WinGet.Source_8wekyb3d8bbwe\bin\gh.exe"
 $repo = "mrabhify7080-glitch/vashu-website"
-$files = @("vashu-profile.jpg", "style.css", "index.html", "about.html", "music.html", "services.html", "portfolio.html", "gallery.html", "blog.html", "testimonials.html", "presskit.html", "contact.html")
+$files = @("vashu-profile.jpg", "themelofy-logo-transparent.png", "style.css", "index.html", "about.html", "music.html", "services.html", "portfolio.html", "gallery.html", "blog.html", "testimonials.html", "presskit.html", "contact.html")
 
 Write-Host "Syncing and Pushing all multi-page files to GitHub..." -ForegroundColor Cyan
 
