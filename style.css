@@ -2035,3 +2035,172 @@ footer .tag {
     }
 }
 
+/* ==========================================================================
+   ULTRA-PROFESSIONAL ARTIST POLISH & STICKY GLOBAL AUDIO PLAYER
+   ========================================================================== */
+
+/* Top Scroll Progress Line */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-soft), #ffffff);
+    z-index: 2000;
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px var(--gold);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--navy-deep);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.4);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* Desktop Dropdown Navigation */
+.nav-item-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(5, 11, 36, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px 0;
+    min-width: 180px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1200;
+}
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 0.8rem !important;
+    color: var(--white) !important;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.dropdown-menu a:hover {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold-soft) !important;
+}
+
+/* Global Sticky Audio Player Bar */
+.global-audio-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background: rgba(12, 15, 35, 0.88);
+    backdrop-filter: blur(18px);
+    border: 1px solid var(--glass-border);
+    border-radius: 40px;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    max-width: 680px;
+    width: 90%;
+    transition: all 0.3s ease;
+}
+.global-audio-bar:hover {
+    border-color: var(--gold);
+    box-shadow: 0 16px 40px rgba(212, 175, 55, 0.15);
+}
+.global-player-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy-deep);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+.global-player-btn:hover {
+    transform: scale(1.1);
+    background: var(--gold-soft);
+}
+.global-player-info {
+    flex: 1;
+    min-width: 0;
+}
+.global-player-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.global-player-artist {
+    font-size: 0.72rem;
+    color: var(--gold-soft);
+}
+.global-equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 18px;
+}
+.global-equalizer span {
+    width: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    height: 40%;
+    transition: height 0.3s ease;
+}
+.global-audio-bar.playing .global-equalizer span {
+    animation: barEq 1.2s infinite ease-in-out alternate;
+}
+.global-equalizer span:nth-child(2) { animation-delay: 0.2s; }
+.global-equalizer span:nth-child(3) { animation-delay: 0.4s; }
+.global-equalizer span:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes barEq {
+    0% { height: 20%; }
+    100% { height: 100%; }
+}
+
+@media (max-width: 600px) {
+    .global-audio-bar {
+        bottom: 16px;
+        padding: 8px 16px;
+        gap: 12px;
+    }
+}
+
