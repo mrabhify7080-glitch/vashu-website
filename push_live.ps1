@@ -13,11 +13,16 @@ foreach ($file in $files) {
     if (Test-Path $filePath) {
         try {
             Write-Host "Pushing $file..." -ForegroundColor Yellow
-            $sha = (& $gh api "/repos/$repo/contents/$file" --jq '.sha' 2>$null)
+            $shaRaw = (& $gh api "/repos/$repo/contents/$file" --jq '.sha' 2>$null)
+            $sha = ""
+            if ($shaRaw) {
+                $sha = ($shaRaw | Out-String).Trim()
+            }
+            
             $bytes = [System.IO.File]::ReadAllBytes($filePath)
             $base64Content = [Convert]::ToBase64String($bytes)
             
-            if ($sha) {
+            if ($sha -and $sha.Length -gt 5) {
                 $body = @{ message = "$message - $file"; content = $base64Content; sha = $sha } | ConvertTo-Json -Depth 5
             } else {
                 $body = @{ message = "$message - $file"; content = $base64Content } | ConvertTo-Json -Depth 5
