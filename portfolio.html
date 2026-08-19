@@ -14,7 +14,58 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=12">
+    <style>
+        .case-study-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+            gap: 30px !important;
+            margin-top: 40px !important;
+        }
+
+        .case-study-card {
+            background: rgba(10, 16, 44, 0.8) !important;
+            backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(212, 175, 55, 0.25) !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+            margin-bottom: 24px !important;
+            transition: transform 0.4s ease, border-color 0.4s ease !important;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-6px) !important;
+            border-color: #D4AF37 !important;
+        }
+
+        .case-study-img {
+            height: 200px !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        .case-study-body {
+            padding: 28px !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .case-study-card h3 {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.35rem !important;
+            color: #ffffff !important;
+            margin-bottom: 10px !important;
+        }
+
+        .case-study-card p {
+            font-size: 0.92rem !important;
+            color: rgba(247, 245, 239, 0.8) !important;
+            line-height: 1.7 !important;
+            margin-bottom: 16px !important;
+        }
+    </style>
 </head>
 
 <body>
