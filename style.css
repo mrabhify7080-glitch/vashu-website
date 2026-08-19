@@ -175,6 +175,57 @@ section {
     }
 }
 
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 60%, var(--gold-dim) 100%);
+    color: var(--navy-deep) !important;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    border: 1px solid var(--gold);
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.55);
+    background: linear-gradient(135deg, #ffffff 0%, var(--gold-soft) 100%);
+}
+
+.btn-outline {
+    background: rgba(212, 175, 55, 0.06);
+    color: var(--white) !important;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+    background: rgba(212, 175, 55, 0.18);
+    border-color: var(--gold);
+    color: var(--gold-soft) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+}
+
+.btn.small {
+    padding: 10px 20px;
+    font-size: 0.82rem;
+}
+
 /* Golden glow blobs */
 .glow {
     position: absolute;
@@ -186,6 +237,165 @@ section {
 
 /* ---------- Nav & Header Design ---------- */
 /* ---------- Nav & Header Design ---------- */
+/* ---------- Hero Section ---------- */
+.hero {
+    min-height: 100vh;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, rgba(5, 11, 36, 0.98) 70%, #02040f 100%);
+}
+
+.hero-bars {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    pointer-events: none;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.hero-bars span {
+    width: 4px;
+    height: var(--h, 30%);
+    background: linear-gradient(180deg, var(--gold), transparent);
+    border-radius: 4px 4px 0 0;
+    animation: heroEqualizer 3s ease-in-out infinite alternate;
+}
+
+@keyframes heroEqualizer {
+    0% { height: 10%; opacity: 0.3; }
+    100% { height: var(--h, 80%); opacity: 0.9; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-kicker {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-kicker::before,
+.hero-kicker::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+}
+.hero-kicker::after {
+    background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.hero-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3.8rem, 9vw, 6.5rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f5ef 45%, var(--gold-soft) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero-role {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: var(--white);
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 36px;
+    font-weight: 300;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.scroll-cue .line {
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    50.1% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
 header {
     position: fixed;
     top: 0;
@@ -425,8 +635,6 @@ header.scrolled .logo-img {
         height: 45px;
         max-height: 45px;
     }
-}
-
 }
 
     .nav-item-dropdown {
