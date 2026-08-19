@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheMeloFY — VASHU | Singer • Composer • Music Producer</title>
     <meta name="description"
-        content="TheMeloFY — The official artist brand of VASHU. Singer, Composer, Music Producer & Songwriter. Where Melody Meets Soul.">
+        content="TheMeloFY — The official artist brand of VASHU. Singer, Composer, Music Producer & Songwriter. Where Melody Meets Soul. Explore discography, book live concerts & studio services.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,9 +16,10 @@
 </head>
 
 <body>
+    <!-- Top Scroll Progress -->
     <div id="scrollProgress"></div>
 
-    <!-- ================= NAV ================= -->
+    <!-- ================= SITE HEADER / NAV ================= -->
     <header id="siteHeader">
         <nav class="wrap">
             <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
@@ -33,28 +34,167 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="burger" id="burger"><span></span><span></span><span></span></div>
+            <div class="burger" id="burger" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="home">
+    <!-- ================= HERO SECTION V2 ================= -->
+    <section class="hero-v2" id="home">
+        <div class="hero-glow-bg"></div>
         <div class="hero-bars" id="heroBars"></div>
-        <div class="hero-content">
-            <div class="hero-kicker">TheMeloFY Presents</div>
-            <h1 class="hero-name">VASHU</h1>
-            <div class="hero-role">Singer • Composer • Music Producer</div>
-            <p class="hero-tagline">"Where Melody Meets Soul"</p>
-            <p class="hero-desc">Creating soulful melodies, unforgettable experiences and music that connects emotions
-                with hearts.</p>
-            <div class="hero-ctas">
-                <a href="portfolio.html" class="btn btn-gold">Listen To My Music</a>
-                <a href="contact.html" class="btn btn-outline">Book Live Show</a>
-                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+
+        <div class="wrap hero-grid-v2">
+            <!-- Left Hero Content -->
+            <div class="hero-left-content reveal">
+                <div class="hero-badge-pill">
+                    <span>✦ TheMeloFY Official Artist</span>
+                </div>
+                <h1 class="hero-title-v2">VASHU</h1>
+                <div class="hero-subtitle-v2">Singer • Composer • Music Producer</div>
+                <p class="hero-bio-v2">
+                    "Where Melody Meets Soul" — Crafting evocative soundscapes, high-energy live concerts, and studio-grade music productions that connect deeply with every listener.
+                </p>
+
+                <div class="hero-quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-lbl">Genres Explored</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Independent Artist</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">360°</span>
+                        <span class="stat-lbl">Music Production</span>
+                    </div>
+                </div>
+
+                <div class="hero-ctas" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="#featured-music" class="btn btn-gold">▶ Listen To Music</a>
+                    <a href="contact.html" class="btn btn-outline">✦ Book Live Show</a>
+                    <a href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20inquire%20about%20booking%20and%20music." target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #25D366; color: #25D366;">
+                        💬 WhatsApp Inquiry
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Hero Card / Visual Showcase -->
+            <div class="hero-card-right reveal">
+                <div class="hero-avatar-frame">
+                    <img src="vashu-profile.jpg" alt="Vashu Singer Composer Music Producer" class="hero-avatar-img">
+                    
+                    <!-- Floating Now Playing Pill -->
+                    <div class="hero-now-playing-pill" id="globalAudioBar">
+                        <button class="mini-play-btn" id="globalPlayBtn" onclick="toggleGlobalTrack()" aria-label="Play/Pause Featured Track">▶</button>
+                        <div class="mini-track-info">
+                            <span class="mini-track-title" id="nowPlayingTitle">Ruhaniyat (रूहानियत)</span>
+                            <span class="mini-track-sub" id="nowPlayingSub">Sufi Pop Fusion • Featured Track</span>
+                        </div>
+                        <div class="live-wave-icon">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="scroll-cue"><span>Scroll</span>
+
+        <div class="scroll-cue">
+            <span>Scroll</span>
             <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- ================= INTERACTIVE MUSIC SHOWCASE ================= -->
+    <section class="music-player-section" id="featured-music">
+        <div class="wrap">
+            <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+                <div class="eyebrow" style="justify-content: center;">Featured Discography</div>
+                <h2 class="section-title">Listen To <em>Original Tracks</em></h2>
+                <p class="section-sub" style="margin: 0 auto;">Experience Vashu's signature sound. Click play to listen to audio previews directly.</p>
+            </div>
+
+            <div class="player-container-card reveal">
+                <!-- Vinyl & Active Track Display -->
+                <div class="active-track-display" id="activeTrackCard">
+                    <div class="vinyl-disc" id="vinylDisc">
+                        <div class="vinyl-center">VM</div>
+                    </div>
+                    <h3 class="active-track-title" id="mainPlayerTitle">Ruhaniyat</h3>
+                    <div class="active-track-genre" id="mainPlayerGenre">Sufi Pop Fusion</div>
+
+                    <!-- Interactive Waveform -->
+                    <div class="player-controls-bar">
+                        <div class="waveform-interactive" id="waveformContainer">
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                            <div class="wf-bar"></div><div class="wf-bar"></div><div class="wf-bar"></div>
+                        </div>
+
+                        <div class="main-play-controls">
+                            <button class="control-btn" onclick="prevTrack()" title="Previous Track">⏮</button>
+                            <button class="big-play-btn" id="mainBigPlayBtn" onclick="toggleMainPlay()" title="Play/Pause">▶</button>
+                            <button class="control-btn" onclick="nextTrack()" title="Next Track">⏭</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playlist Tracks List -->
+                <div class="playlist-tracks-list">
+                    <div class="track-item-card active-track" onclick="selectTrack(0)" id="track-0">
+                        <div class="track-item-left">
+                            <span class="track-idx">01</span>
+                            <div class="track-name-box">
+                                <h4>Ruhaniyat (रूहानियत)</h4>
+                                <p>Sufi Pop Fusion • Spiritual Longing</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                    </div>
+
+                    <div class="track-item-card" onclick="selectTrack(1)" id="track-1">
+                        <div class="track-item-left">
+                            <span class="track-idx">02</span>
+                            <div class="track-name-box">
+                                <h4>Banaras Beats (बनारस बीट्स)</h4>
+                                <p>Indie Folk Fusion • Assi Ghat Vibes</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:12</span>
+                    </div>
+
+                    <div class="track-item-card" onclick="selectTrack(2)" id="track-2">
+                        <div class="track-item-left">
+                            <span class="track-idx">03</span>
+                            <div class="track-name-box">
+                                <h4>Midnight Ragas (मिडनाइट राग)</h4>
+                                <p>Semi Classical • Ambient Fusion</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">5:08</span>
+                    </div>
+
+                    <div class="track-item-card" onclick="selectTrack(3)" id="track-3">
+                        <div class="track-item-left">
+                            <span class="track-idx">04</span>
+                            <div class="track-name-box">
+                                <h4>Tere Bina (तेरे बिना)</h4>
+                                <p>Acoustic Rock Ballad • Romance</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:55</span>
+                    </div>
+
+                    <div style="margin-top: 16px; text-align: right;">
+                        <a href="music.html" class="btn btn-outline small">Explore All Tracks & Lyrics →</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -64,27 +204,27 @@
             <div class="about-text reveal">
                 <div class="eyebrow">The Artist</div>
                 <h2 class="section-title">About <em>Vashu</em></h2>
-                <p>Vashu is an independent artist, singer, composer, songwriter and music producer who transforms
-                    emotions into melodies.</p>
-                <p>With creativity, passion and dedication, Vashu creates original music, live performances and
-                    professional music productions across different genres — bringing every story to life through sound.
-                </p>
-                <div class="about-stats">
+                <p>Vashu is an independent singer, composer, songwriter, and music producer who breathes life into emotions through melody.</p>
+                <p>Rooted in Banaras and blending classical soul with modern pop, rock, and folk production, Vashu crafts unforgettable live experiences and studio recordings tailored for every stage.</p>
+                
+                <div class="about-stats" style="margin-top: 24px;">
                     <div><b>8+</b><span>Genres Explored</span></div>
                     <div><b>100%</b><span>Independent Artist</span></div>
                     <div><b>360°</b><span>Music Production</span></div>
                 </div>
+                
                 <div style="margin-top: 32px;">
-                    <a href="about.html" class="btn btn-gold small">More About Vashu →</a>
+                    <a href="about.html" class="btn btn-gold small">Read Full Biography →</a>
                 </div>
             </div>
+
             <div class="profile-card reveal">
                 <div class="profile-inner">
                     <div class="profile-img-wrap">
                         <img src="vashu-profile.jpg" alt="VASHU - Singer, Composer & Music Producer">
                     </div>
                     <h3>VASHU</h3>
-                    <span class="role">Indie Artist • Songwriter • Music Producer</span>
+                    <span class="role">Indie Artist • Songwriter • Producer</span>
                     <div class="profile-badges">
                         <span>Singer</span><span>Composer</span><span>Producer</span><span>Songwriter</span>
                     </div>
@@ -93,137 +233,240 @@
         </div>
     </section>
 
-    <!-- ================= GENRES PREVIEW ================= -->
-    <section id="music">
+    <!-- ================= MUSIC GENRES SECTION (SVG CARDS) ================= -->
+    <section id="music" style="background: rgba(2, 4, 15, 0.6);">
         <div class="wrap">
-            <div class="reveal" style="text-align:center;">
-                <div class="eyebrow" style="justify-content:center;">Sound &amp; Style</div>
+            <div class="reveal" style="text-align: center;">
+                <div class="eyebrow" style="justify-content: center;">Sound &amp; Versatility</div>
                 <h2 class="section-title">Music <em>Genres</em></h2>
-                <p class="section-sub" style="margin:0 auto;">A versatile sound built across traditions and trends —
-                    every genre, one soulful signature.</p>
+                <p class="section-sub" style="margin: 0 auto;">A rich sonic palette built across traditions and modern trends — every genre crafted with Vashu's soulful signature.</p>
             </div>
-            <div class="genre-grid">
-                <div class="genre-card reveal"><span class="ic">🎵</span>
-                    <h4>Bollywood</h4>
+
+            <div class="genre-grid-v2">
+                <!-- Genre 1: Bollywood -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    </div>
+                    <h4>Bollywood & Commercial</h4>
+                    <p>Romantic ballads, high-octane dance anthems, and cinematic melodies designed for silver screens and live audiences.</p>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎸</span>
-                    <h4>Rock &amp; Metal</h4>
+
+                <!-- Genre 2: Sufi & Devotional -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6a6 6 0 0 0-6 6h12a6 6 0 0 0-6-6z"></path></svg>
+                    </div>
+                    <h4>Sufi & Devotional</h4>
+                    <p>Spiritual compositions infused with harmonium notes, ambient pads, and soaring vocal alaps that touch the soul.</p>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎤</span>
-                    <h4>Pop</h4>
+
+                <!-- Genre 3: Pop & Acoustic -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h4>Pop & Acoustic</h4>
+                    <p>Catchy hooks, warm guitar arpeggios, and intimate acoustic storytelling perfect for radio and digital streams.</p>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🌙</span>
-                    <h4>Sufi</h4>
+
+                <!-- Genre 4: Rock & Metal -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h4>Rock & Metal</h4>
+                    <p>Electrifying guitar riffs, powerful vocal ranges, and driving rhythm sections that energize arena crowds.</p>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎻</span>
-                    <h4>Classical</h4>
+
+                <!-- Genre 5: Classical & Semi Classical -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M12 3v18M8 7h8M6 12h12M9 17h6"></path></svg>
+                    </div>
+                    <h4>Classical & Semi-Classical</h4>
+                    <p>Technically proficient ragas, bandishes, and thumris rooted in classical Indian heritage.</p>
                 </div>
-                <div class="genre-card reveal"><span class="ic">🎼</span>
-                    <h4>Semi Classical</h4>
-                </div>
-                <div class="genre-card reveal"><span class="ic">🌿</span>
-                    <h4>Folk</h4>
-                </div>
-                <div class="genre-card reveal"><span class="ic">🎧</span>
-                    <h4>Indie</h4>
+
+                <!-- Genre 6: Folk & Indie Fusion -->
+                <div class="genre-card-v2 reveal">
+                    <div class="genre-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h4>Folk & Indie Fusion</h4>
+                    <p>Traditional instruments sampled alongside contemporary electronic basslines for an authentic indie sound.</p>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:40px;">
-                <a href="music.html" class="btn btn-outline small">Explore Music Page →</a>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="music.html" class="btn btn-outline small">View Full Music Discography →</a>
             </div>
         </div>
     </section>
 
-    <!-- ================= SERVICES PREVIEW ================= -->
+    <!-- ================= SERVICES & PERFORMANCES ================= -->
     <section class="services" id="services">
         <div class="wrap">
             <div class="reveal">
-                <div class="eyebrow">What Vashu Offers</div>
+                <div class="eyebrow">Professional Offerings</div>
                 <h2 class="section-title">Services &amp; <em>Performances</em></h2>
-                <p class="section-sub">From intimate acoustic sets to full-scale productions — music crafted for every
-                    stage and story.</p>
+                <p class="section-sub">From intimate acoustic nights to stadium live concerts and end-to-end studio production.</p>
             </div>
-            <div class="svc-grid">
-                <div class="svc-card reveal"><span class="svc-num">Live</span>
-                    <h4>Live Concerts</h4>
-                    <p>High-energy stage performances that turn any venue into an experience.</p>
+
+            <div class="svc-grid-v2">
+                <!-- Service 1 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Stage Performance</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                            </div>
+                        </div>
+                        <h4>Live Concerts & Festivals</h4>
+                        <p>Electrifying stage presence, custom setlists, and high-energy vocals that headline major music festivals and college fests.</p>
+                    </div>
+                    <a href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20book%20a%20Live%20Concert." target="_blank" rel="noopener" class="svc-footer-btn">
+                        Book Concert →
+                    </a>
                 </div>
-                <div class="svc-card reveal"><span class="svc-num">Live</span>
-                    <h4>Wedding Performances</h4>
-                    <p>Soulful live music that makes your wedding day unforgettable.</p>
+
+                <!-- Service 2 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Celebration</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            </div>
+                        </div>
+                        <h4>Wedding & Sangeet Shows</h4>
+                        <p>Soulful romantic numbers and energetic dance music curated to make your special day truly unforgettable.</p>
+                    </div>
+                    <a href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20inquire%20about%20Wedding%20Performance." target="_blank" rel="noopener" class="svc-footer-btn">
+                        Inquire Wedding →
+                    </a>
                 </div>
-                <div class="svc-card reveal"><span class="svc-num">Live</span>
-                    <h4>Private Events</h4>
-                    <p>Curated performances for intimate gatherings and celebrations.</p>
+
+                <!-- Service 3 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Private & Corporate</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </div>
+                        </div>
+                        <h4>Corporate & Private Events</h4>
+                        <p>Elegantly tailored acoustic sets and ambient lounge performances for corporate galas, VIP parties, and launches.</p>
+                    </div>
+                    <a href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20book%20a%20Corporate/Private%20event." target="_blank" rel="noopener" class="svc-footer-btn">
+                        Book Event →
+                    </a>
                 </div>
-                <div class="svc-card reveal"><span class="svc-num">Studio</span>
-                    <h4>Studio Recording</h4>
-                    <p>Full recording sessions with pristine sound and creative direction.</p>
+
+                <!-- Service 4 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Studio</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                            </div>
+                        </div>
+                        <h4>Full Music Production</h4>
+                        <p>Complete track composition, arrangement, beat making, and sound engineering from scratch to final master.</p>
+                    </div>
+                    <a href="services.html" class="svc-footer-btn">
+                        Production Services →
+                    </a>
                 </div>
-                <div class="svc-card reveal"><span class="svc-num">Studio</span>
-                    <h4>Music Production</h4>
-                    <p>End-to-end production — from composition to final master.</p>
+
+                <!-- Service 5 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Composition</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </div>
+                        </div>
+                        <h4>Songwriting & Lyrics</h4>
+                        <p>Heartfelt Hindi & Urdu lyrics and memorable song hooks written for indie singles, films, and web series.</p>
+                    </div>
+                    <a href="services.html" class="svc-footer-btn">
+                        Learn More →
+                    </a>
                 </div>
-                <div class="svc-card reveal"><span class="svc-num">Studio</span>
-                    <h4>Sound Engineering</h4>
-                    <p>Mixing and mastering that gives your track a professional edge.</p>
+
+                <!-- Service 6 -->
+                <div class="svc-card-v2 reveal">
+                    <div>
+                        <div class="svc-card-header">
+                            <span class="svc-tag-badge">Post-Production</span>
+                            <div class="svc-icon-svg">
+                                <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                            </div>
+                        </div>
+                        <h4>Mixing & Mastering</h4>
+                        <p>Pristine audio mixing and streaming-ready mastering that gives your tracks competitive clarity and punch.</p>
+                    </div>
+                    <a href="services.html" class="svc-footer-btn">
+                        Mixing Details →
+                    </a>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:46px;">
-                <a href="services.html" class="btn btn-gold small">View All Services →</a>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="services.html" class="btn btn-gold small">View All Services & Details →</a>
             </div>
         </div>
     </section>
 
-    <!-- ================= PORTFOLIO PREVIEW ================= -->
-    <section class="portfolio" id="portfolio">
+    <!-- ================= SOCIAL & STREAMING HUBS ================= -->
+    <section class="social" style="background: rgba(2, 4, 15, 0.8);">
         <div class="wrap">
-            <div class="reveal">
-                <div class="eyebrow">The Work</div>
-                <h2 class="section-title">Portfolio &amp; <em>Showcase</em></h2>
-                <p class="section-sub">A glimpse into original music, live moments and studio craft.</p>
-            </div>
-            <div class="pf-grid" style="margin-top:40px;">
-                <div class="pf-item reveal">
-                    <div class="pf-play">▶</div>
-                    <div class="pf-caption"><b>Original Music</b> — Soulscapes</div>
-                </div>
-                <div class="pf-item reveal">
-                    <div class="pf-play">▶</div>
-                    <div class="pf-caption"><b>Original Music</b> — Midnight Ragas</div>
-                </div>
-                <div class="pf-item reveal">
-                    <div class="pf-play">▶</div>
-                    <div class="pf-caption"><b>YouTube</b> — Official Music Video</div>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top:46px;">
-                <a href="portfolio.html" class="btn btn-outline small">View Full Portfolio →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= SOCIAL ================= -->
-    <section class="social">
-        <div class="wrap">
-            <div class="reveal">
-                <div class="eyebrow" style="justify-content:center;">Stay Connected</div>
+            <div class="reveal" style="text-align: center;">
+                <div class="eyebrow" style="justify-content: center;">Stay Connected</div>
                 <h2 class="section-title">Follow <em>TheMeloFY</em></h2>
-                <p class="section-sub" style="margin:0 auto;">Join the journey — new music, live moments and
-                    behind-the-scenes, first.</p>
+                <p class="section-sub" style="margin: 0 auto;">Stream new music, watch live concert videos, and follow behind-the-scenes moments.</p>
             </div>
-            <div class="social-links reveal">
-                <a class="social-card" href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">
-                    <div class="ic">▶</div>
-                    <h4>YouTube</h4><span>@VashuVibes07</span>
+
+            <div class="social-grid-v2">
+                <!-- YouTube -->
+                <a class="social-card-v2 youtube reveal" href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">
+                    <div class="social-svg-icon">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </div>
+                    <h4>YouTube</h4>
+                    <span>@VashuVibes07</span>
                 </a>
-                <a class="social-card" href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">
-                    <div class="ic">◎</div>
-                    <h4>Instagram</h4><span>@vashuvibes07</span>
+
+                <!-- Instagram -->
+                <a class="social-card-v2 instagram reveal" href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">
+                    <div class="social-svg-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <h4>Instagram</h4>
+                    <span>@vashuvibes07</span>
                 </a>
-                <a class="social-card" href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener">
-                    <div class="ic">f</div>
-                    <h4>Facebook</h4><span>TheMeloFY</span>
+
+                <!-- Facebook -->
+                <a class="social-card-v2 facebook reveal" href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener">
+                    <div class="social-svg-icon">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <h4>Facebook</h4>
+                    <span>TheMeloFY</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a class="social-card-v2 spotify reveal" style="background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3);" href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20connect%20with%20you." target="_blank" rel="noopener">
+                    <div class="social-svg-icon" style="background: rgba(37, 211, 102, 0.2); border-color: rgba(37, 211, 102, 0.4);">
+                        <svg viewBox="0 0 24 24" style="fill: #25D366;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.299.434 2.503 1.185 3.477l-.776 2.833 2.901-.761c.94.513 2.01.81 3.149.81 3.182 0 5.769-2.587 5.769-5.767 0-3.18-2.587-5.758-5.76-5.758zm3.42 8.169c-.146.411-.849.776-1.188.825-.339.049-.773.082-2.484-.626-2.073-.858-3.385-2.981-3.488-3.12-.103-.139-.838-1.116-.838-2.128 0-1.012.528-1.51.716-1.716.188-.206.411-.257.548-.257.137 0 .274.003.394.009.127.006.297-.048.465.355.174.418.591 1.442.643 1.545.052.103.086.223.017.36-.069.137-.103.223-.206.343-.103.12-.216.268-.309.36-.103.103-.211.215-.091.421.12.206.533.879 1.144 1.423.786.7 1.448.919 1.654 1.022.206.103.326.086.446-.052.12-.137.514-.6.651-.806.137-.206.274-.171.463-.103.189.069 1.201.566 1.407.669.206.103.343.154.394.24.051.086.051.497-.095.908z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.954-1.393A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.634 0-3.15-.444-4.453-1.215l-.319-.188-2.946.829.837-2.87-.207-.331A7.954 7.954 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                    </div>
+                    <h4 style="color: #25D366;">WhatsApp</h4>
+                    <span>Direct Artist Inquiries</span>
                 </a>
             </div>
         </div>
@@ -232,28 +475,30 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="wrap">
-            <a href="index.html" class="logo-brand" style="margin-bottom: 12px;" aria-label="TheMeloFY Home">
+            <a href="index.html" class="logo-brand" style="margin-bottom: 12px; justify-content: center;" aria-label="TheMeloFY Home">
                 <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 60px; height: 60px;">
             </a>
             <p class="tag">"Let's Create Memories Through Music"</p>
             <div class="footer-social">
-                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener"
-                    aria-label="YouTube">▶</a>
-                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener"
-                    aria-label="Instagram">◎</a>
-                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener"
-                    aria-label="Facebook">f</a>
+                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
             </div>
             <div class="footer-nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="music.html">Music</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
             </div>
             <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
         </div>
     </footer>
 
-    <div class="totop" id="toTop">↑</div>
+    <!-- Back to top button -->
+    <div class="totop" id="toTop" title="Scroll to Top">↑</div>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/917267963020?text=Hello%20Vashu,%20I%20want%20to%20inquire%20about%20booking%20and%20music." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
@@ -263,6 +508,7 @@
         </svg>
     </a>
 
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
     <script>
         // Scroll progress bar
         const progressBar = document.getElementById('scrollProgress');
@@ -273,52 +519,40 @@
             if (progressBar) progressBar.style.width = scrolled + "%";
         });
 
-        // Global sticky audio player toggle
-        let isAudioPlaying = false;
-        function toggleGlobalAudio() {
-            const bar = document.getElementById('globalAudioBar');
-            const btn = document.getElementById('globalPlayBtn');
-            isAudioPlaying = !isAudioPlaying;
-            if (isAudioPlaying) {
-                bar.classList.add('playing');
-                btn.textContent = '⏸';
-            } else {
-                bar.classList.remove('playing');
-                btn.textContent = '▶';
-            }
-        }
-
         // Header scroll state
         const header = document.getElementById('siteHeader');
         const toTop = document.getElementById('toTop');
         window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 40);
-            toTop.classList.toggle('show', window.scrollY > 500);
+            if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+            if (toTop) toTop.classList.toggle('show', window.scrollY > 500);
         });
-        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
         // Mobile nav
         const burger = document.getElementById('burger');
         const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-        });
-        // Hero equalizer bars (Slow Motion)
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                burger.classList.toggle('open');
+            });
+        }
+
+        // Hero equalizer bars
         const heroBars = document.getElementById('heroBars');
         if (heroBars) {
-            const barCount = 60;
+            const barCount = 50;
             for (let i = 0; i < barCount; i++) {
                 const s = document.createElement('span');
-                const h = 20 + Math.random() * 80;
+                const h = 15 + Math.random() * 85;
                 s.style.setProperty('--h', h + '%');
                 s.style.animationDelay = (Math.random() * 3.5) + 's';
-                s.style.animationDuration = (3.5 + Math.random() * 3.5) + 's';
+                s.style.animationDuration = (3.0 + Math.random() * 3.0) + 's';
                 heroBars.appendChild(s);
             }
         }
 
-        // Scroll reveal
+        // Scroll reveal animation
         const revealEls = document.querySelectorAll('.reveal');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
@@ -327,11 +561,126 @@
                     io.unobserve(e.target);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1 });
         revealEls.forEach((el, i) => {
             el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
             io.observe(el);
         });
+
+        // ================= INTERACTIVE MUSIC PLAYER SYSTEM =================
+        const tracksData = [
+            { title: "Ruhaniyat (रूहानियत)", genre: "Sufi Pop Fusion", freq: 440, duration: "3:45" },
+            { title: "Banaras Beats (बनारस बीट्स)", genre: "Indie Folk Fusion", freq: 523, duration: "4:12" },
+            { title: "Midnight Ragas (मिडनाइट राग)", genre: "Semi Classical Fusion", freq: 392, duration: "5:08" },
+            { title: "Tere Bina (तेरे बिना)", genre: "Acoustic Rock Ballad", freq: 329, duration: "3:55" }
+        ];
+
+        let currentTrackIdx = 0;
+        let isPlaying = false;
+        let audioCtx = null;
+        let synthOsc = null;
+        let synthGain = null;
+
+        function initAudioSynth() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) audioCtx = new AudioContext();
+            }
+        }
+
+        function playSynthTone(freq) {
+            initAudioSynth();
+            if (!audioCtx) return;
+
+            stopSynthTone();
+
+            synthOsc = audioCtx.createOscillator();
+            synthGain = audioCtx.createGain();
+
+            synthOsc.type = 'triangle';
+            synthOsc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            // Subtle smooth envelope
+            synthGain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            synthGain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.3);
+
+            synthOsc.connect(synthGain);
+            synthGain.connect(audioCtx.destination);
+            synthOsc.start();
+        }
+
+        function stopSynthTone() {
+            if (synthGain && audioCtx) {
+                synthGain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+                setTimeout(() => {
+                    if (synthOsc) {
+                        try { synthOsc.stop(); synthOsc.disconnect(); } catch(e){}
+                        synthOsc = null;
+                    }
+                }, 200);
+            }
+        }
+
+        function selectTrack(idx) {
+            currentTrackIdx = idx;
+            updatePlayerUI();
+            if (isPlaying) {
+                playSynthTone(tracksData[currentTrackIdx].freq);
+            }
+        }
+
+        function updatePlayerUI() {
+            const track = tracksData[currentTrackIdx];
+            document.getElementById('mainPlayerTitle').textContent = track.title;
+            document.getElementById('mainPlayerGenre').textContent = track.genre;
+            document.getElementById('nowPlayingTitle').textContent = track.title;
+            document.getElementById('nowPlayingSub').textContent = track.genre + " • Playing";
+
+            // Update track selection highlighting
+            for (let i = 0; i < tracksData.length; i++) {
+                const card = document.getElementById('track-' + i);
+                if (card) {
+                    if (i === currentTrackIdx) card.classList.add('active-track');
+                    else card.classList.remove('active-track');
+                }
+            }
+        }
+
+        function toggleMainPlay() {
+            isPlaying = !isPlaying;
+            const bigBtn = document.getElementById('mainBigPlayBtn');
+            const miniBtn = document.getElementById('globalPlayBtn');
+            const activeCard = document.getElementById('activeTrackCard');
+            const globalBar = document.getElementById('globalAudioBar');
+
+            if (isPlaying) {
+                if (bigBtn) bigBtn.textContent = '⏸';
+                if (miniBtn) miniBtn.textContent = '⏸';
+                if (activeCard) activeCard.classList.add('playing');
+                if (globalBar) globalBar.classList.add('playing');
+                playSynthTone(tracksData[currentTrackIdx].freq);
+            } else {
+                if (bigBtn) bigBtn.textContent = '▶';
+                if (miniBtn) miniBtn.textContent = '▶';
+                if (activeCard) activeCard.classList.remove('playing');
+                if (globalBar) globalBar.classList.remove('playing');
+                stopSynthTone();
+            }
+        }
+
+        function toggleGlobalTrack() {
+            toggleMainPlay();
+        }
+
+        function nextTrack() {
+            currentTrackIdx = (currentTrackIdx + 1) % tracksData.length;
+            selectTrack(currentTrackIdx);
+        }
+
+        function prevTrack() {
+            currentTrackIdx = (currentTrackIdx - 1 + tracksData.length) % tracksData.length;
+            selectTrack(currentTrackIdx);
+        }
     </script>
 </body>
 
