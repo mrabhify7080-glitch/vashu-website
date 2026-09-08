@@ -2,7 +2,17 @@ param (
     [string]$message = "Update multi-page website"
 )
 
-$gh = "C:\Users\ASUS\AppData\Local\Microsoft\WinGet\Packages\GitHub.cli_Microsoft.WinGet.Source_8wekyb3d8bbwe\bin\gh.exe"
+$gh = (Get-Command gh -ErrorAction SilentlyContinue).Source
+if (-not $gh) {
+    $possiblePaths = @(
+        "C:\Users\$env:USERNAME\AppData\Local\Microsoft\WinGet\Packages\GitHub.cli_Microsoft.WinGet.Source_8wekyb3d8bbwe\bin\gh.exe",
+        "C:\Program Files\GitHub CLI\gh.exe",
+        "C:\Users\ASUS\AppData\Local\Microsoft\WinGet\Packages\GitHub.cli_Microsoft.WinGet.Source_8wekyb3d8bbwe\bin\gh.exe"
+    )
+    foreach ($p in $possiblePaths) {
+        if (Test-Path $p) { $gh = $p; break }
+    }
+}
 $repo = "mrabhify7080-glitch/vashu-website"
 $files = @("CNAME", "vashu-profile.jpg", "themelofy-logo-transparent.png", "style.css", "index.html", "about.html", "music.html", "services.html", "portfolio.html", "gallery.html", "blog.html", "testimonials.html", "presskit.html", "contact.html")
 

@@ -222,7 +222,7 @@
                 <div class="contact-info reveal">
                     <div><span class="lbl">Artist</span><span class="val">VASHU</span></div>
                     <div><span class="lbl">Phone</span><span class="val">+91 7267963020</span></div>
-                    <div><span class="lbl">Email</span><span class="val">vashuvibes07@gmail.com</span></div>
+                    <div><span class="lbl">Email</span><span class="val"><a href="mailto:mrabhify7080@gmail.com" style="color: inherit; text-decoration: none;">mrabhify7080@gmail.com</a></span></div>
                     <div><span class="lbl">Location</span><span class="val">Varanasi, 221106<br>Uttar Pradesh, India</span></div>
 
 
@@ -255,7 +255,7 @@
                     <div class="field"><label for="fmsg">Message</label><textarea id="fmsg"
                             placeholder="Tell me about your event or project..."></textarea></div>
                     <button type="submit" class="btn btn-gold submit-btn">Send Message</button>
-                    <p class="form-note">Or reach out directly at vashuvibes07@gmail.com</p>
+                    <p class="form-note">Or reach out directly at <a href="mailto:mrabhify7080@gmail.com" style="color: var(--gold); text-decoration: none;">mrabhify7080@gmail.com</a></p>
                 </form>
             </div>
         </div>
@@ -324,15 +324,56 @@
         });
         navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-        // Contact form submit feedback
+        // Contact form submit feedback & delivery to mrabhify7080@gmail.com
         const form = document.getElementById('contactForm');
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('.submit-btn');
             const original = btn.textContent;
-            btn.textContent = 'Message Sent ✓';
-            btn.style.opacity = '.8';
-            setTimeout(() => { btn.textContent = original; btn.style.opacity = '1'; form.reset(); }, 2400);
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            const name = document.getElementById('fname').value;
+            const email = document.getElementById('femail').value;
+            const phone = document.getElementById('fphone').value;
+            const eventType = document.getElementById('fevent').value;
+            const message = document.getElementById('fmsg').value;
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/mrabhify7080@gmail.com', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Name: name,
+                        Email: email,
+                        Phone: phone,
+                        'Event Type': eventType,
+                        Message: message,
+                        _subject: `New Inquiry from ${name} (${eventType}) - TheMeloFY`
+                    })
+                });
+
+                if (response.ok) {
+                    btn.textContent = 'Message Sent ✓';
+                    btn.style.opacity = '.8';
+                    form.reset();
+                } else {
+                    window.location.href = `mailto:mrabhify7080@gmail.com?subject=${encodeURIComponent('Inquiry: ' + eventType + ' - ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nEvent: ' + eventType + '\n\nMessage:\n' + message)}`;
+                    btn.textContent = 'Message Sent ✓';
+                }
+            } catch (err) {
+                window.location.href = `mailto:mrabhify7080@gmail.com?subject=${encodeURIComponent('Inquiry: ' + eventType + ' - ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nEvent: ' + eventType + '\n\nMessage:\n' + message)}`;
+                btn.textContent = 'Message Sent ✓';
+            }
+
+            setTimeout(() => { 
+                btn.textContent = original; 
+                btn.disabled = false;
+                btn.style.opacity = '1'; 
+            }, 3000);
         });
 
         const revealEls = document.querySelectorAll('.reveal');
