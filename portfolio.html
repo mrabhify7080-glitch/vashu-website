@@ -1,402 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio & Case Studies — Vashu | TheMeloFY</title>
-    <meta name="description"
-        content="Explore Vashu's live performance portfolio and case studies — Destination Weddings in Udaipur, Corporate Galas in Delhi, College Cultural Fests, and Film OST Scoring.">
-    <meta property="og:title" content="Portfolio & Case Studies — Vashu | TheMeloFY">
-    <meta property="og:description" content="Explore Vashu's live performance portfolio, destination wedding case studies, and film soundtrack productions.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=15">
-    <style>
-        .case-study-grid {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-            gap: 30px !important;
-            margin-top: 40px !important;
-        }
-
-        .case-study-card {
-            background: rgba(10, 16, 44, 0.8) !important;
-            backdrop-filter: blur(16px) !important;
-            border: 1px solid rgba(212, 175, 55, 0.25) !important;
-            border-radius: 20px !important;
-            overflow: hidden !important;
-            display: flex !important;
-            flex-direction: column !important;
-            margin-bottom: 24px !important;
-            transition: transform 0.4s ease, border-color 0.4s ease !important;
-        }
-
-        .case-study-card:hover {
-            transform: translateY(-6px) !important;
-            border-color: #D4AF37 !important;
-        }
-
-        .case-study-img {
-            height: 200px !important;
-            background-size: cover !important;
-            background-position: center !important;
-        }
-
-        .case-study-body {
-            padding: 28px !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-
-        .case-study-card h3 {
-            font-family: 'Playfair Display', serif !important;
-            font-size: 1.35rem !important;
-            color: #ffffff !important;
-            margin-bottom: 10px !important;
-        }
-
-        .case-study-card p {
-            font-size: 0.92rem !important;
-            color: rgba(247, 245, 239, 0.8) !important;
-            line-height: 1.7 !important;
-            margin-bottom: 16px !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio & Projects — Vashu | TheMeloFY</title>
+  <meta name="description" content="Explore selected music projects, live concert showcases, and soundtrack compositions by Vashu.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="scrollProgress"></div>
 
-    <!-- ================= NAV ================= -->
-    <header id="siteHeader" class="scrolled">
-        <nav class="wrap">
-            <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger" id="burger"><span></span><span></span><span></span></div>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header id="siteHeader">
+    <nav class="wrap">
+      <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
+      </a>
 
-    <!-- ================= PAGE HEADER ================= -->
-    <section class="page-header">
-        <div class="wrap">
-            <div class="eyebrow">Past Highlights</div>
-            <h1 class="section-title">Performance <em>Portfolio</em></h1>
-            <p class="section-sub" style="margin: 0 auto;">Case studies of unforgettable live concerts, luxury wedding celebrations, and studio productions.</p>
-        </div>
-    </section>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-    <!-- ================= CASE STUDIES GRID ================= -->
-    <section style="padding: 60px 0 90px;">
-        <div class="wrap">
-            <div class="case-study-grid">
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+      </div>
 
-                <!-- Case Study 1 -->
-                <div class="case-study-card reveal">
-                    <div class="case-study-img" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(5, 11, 36, 0.95)); display: flex; align-items: flex-end; padding: 20px;">
-                        <span class="case-study-badge">Destination Wedding</span>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-meta">
-                            <span>📍 Udaipur Palace</span>
-                            <span>👥 350+ Guests</span>
-                        </div>
-                        <h3 class="case-study-title">Royal Sufi &amp; Acoustic Sunset Night</h3>
-                        <p class="case-study-desc">
-                            Vashu led an intimate 5-piece acoustic ensemble overlooking Lake Pichola. The performance featured candlelit Sufi renditions, traditional thumris, and a custom-arranged acoustic entry medley for the bride and groom. Guests were captivated by 2.5 hours of seamless vocal storytelling.
-                        </p>
-                        <div style="font-size: 0.85rem; color: var(--gold-soft); background: rgba(212,175,55,0.06); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--glass-border);">
-                            "Vashu turned our wedding night into a magical fairytale. Every guest was mesmerized!" — <em>Wedding Host</em>
-                        </div>
-                    </div>
-                </div>
+      <div class="burger" id="burger" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
 
-                <!-- Case Study 2 -->
-                <div class="case-study-card reveal">
-                    <div class="case-study-img" style="background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(5, 11, 36, 0.95)); display: flex; align-items: flex-end; padding: 20px;">
-                        <span class="case-study-badge">Corporate Gala</span>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-meta">
-                            <span>📍 Aerocity, New Delhi</span>
-                            <span>👥 800+ Delegates</span>
-                        </div>
-                        <h3 class="case-study-title">Tech Summit Annual Excellence Awards</h3>
-                        <p class="case-study-desc">
-                            A high-octane live concert combining classic 90s Bollywood anthems with modern rock drum rhythms. Vashu energized the corporate audience, transitioning seamlessly from ambient dinner acoustics to a roaring dance floor finale.
-                        </p>
-                        <div style="font-size: 0.85rem; color: var(--gold-soft); background: rgba(212,175,55,0.06); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--glass-border);">
-                            "Flawless sound quality, energetic vocal delivery, and total professionalism." — <em>Event Operations Director</em>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 3 -->
-                <div class="case-study-card reveal">
-                    <div class="case-study-img" style="background: linear-gradient(135deg, rgba(235, 87, 87, 0.25), rgba(5, 11, 36, 0.95)); display: flex; align-items: flex-end; padding: 20px;">
-                        <span class="case-study-badge">Campus Fest</span>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-meta">
-                            <span>📍 Open Air Amphitheatre</span>
-                            <span>👥 5,000+ Crowd</span>
-                        </div>
-                        <h3 class="case-study-title">University Star Night Concert</h3>
-                        <p class="case-study-desc">
-                            Headline performance at a major youth cultural festival. Vashu delivered a 120-minute power-packed set featuring original rock ballads, pop medleys, and massive crowd singalongs, backed by heavy synth leads and electric guitar solos.
-                        </p>
-                        <div style="font-size: 0.85rem; color: var(--gold-soft); background: rgba(212,175,55,0.06); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--glass-border);">
-                            "The biggest crowd response of the festival season!" — <em>Fest Student Committee</em>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 4 -->
-                <div class="case-study-card reveal">
-                    <div class="case-study-img" style="background: linear-gradient(135deg, rgba(155, 81, 224, 0.25), rgba(5, 11, 36, 0.95)); display: flex; align-items: flex-end; padding: 20px;">
-                        <span class="case-study-badge">Studio Scoring</span>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-meta">
-                            <span>📍 TheMeloFY Studio</span>
-                            <span>🎬 Indie Feature Film</span>
-                        </div>
-                        <h3 class="case-study-title">Film OST &amp; Background Score</h3>
-                        <p class="case-study-desc">
-                            Composed, arranged, and mixed the complete original score and title track for an indie drama film set in Northern India. Combined organic shehnai and sarangi textures with sub-bass pads and vocal textures to heighten emotional tension.
-                        </p>
-                        <div style="font-size: 0.85rem; color: var(--gold-soft); background: rgba(212,175,55,0.06); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--glass-border);">
-                            "Vashu's music breathed genuine soul into our cinematic story." — <em>Film Director</em>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= PHOTO & VIDEO GALLERY SECTION ================= -->
-    <section id="gallery" style="padding: 70px 0 90px; background: rgba(2, 4, 15, 0.4); border-top: 1px solid var(--glass-border);">
-        <div class="wrap">
-            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 35px;">
-                <div class="eyebrow" style="justify-content: center;">Visual Experience</div>
-                <h2 class="section-title">Photo &amp; Video <em>Gallery</em></h2>
-                <p class="section-sub">Captured moments from live stage concerts, studio recording sessions, and destination weddings.</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="gallery-filters reveal">
-                <button class="filter-btn active" onclick="filterGallery('all', event)">All Photos</button>
-                <button class="filter-btn" onclick="filterGallery('live', event)">Live Shows</button>
-                <button class="filter-btn" onclick="filterGallery('studio', event)">Studio Sessions</button>
-                <button class="filter-btn" onclick="filterGallery('events', event)">Weddings &amp; Events</button>
-            </div>
-
-            <!-- Gallery Grid -->
-            <div class="gallery-grid">
-
-                <div class="gallery-item reveal" data-cat="live">
-                    <div class="gallery-card-icon"><i class="fas fa-microphone-alt"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>Stage Acoustic Set</h5>
-                        <span>Live Concert • College Fest</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item reveal" data-cat="studio">
-                    <div class="gallery-card-icon"><i class="fas fa-headphones-alt"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>Studio Vocal Recording</h5>
-                        <span>TheMeloFY Studio • Single Sessions</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item reveal" data-cat="events">
-                    <div class="gallery-card-icon"><i class="fas fa-guitar"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>Udaipur Destination Wedding</h5>
-                        <span>Palace Sufi Night • Rajasthan</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item reveal" data-cat="live">
-                    <div class="gallery-card-icon"><i class="fas fa-music"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>Corporate Annual Gala</h5>
-                        <span>New Delhi • Corporate Show</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item reveal" data-cat="studio">
-                    <div class="gallery-card-icon"><i class="fas fa-sliders-h"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>Audio Mixing &amp; Mastering</h5>
-                        <span>DAW Production • Scoring</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item reveal" data-cat="events">
-                    <div class="gallery-card-icon"><i class="fas fa-drum"></i></div>
-                    <div class="gallery-card-info">
-                        <h5>VIP Unplugged Session</h5>
-                        <span>Private Cocktail Night</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= LIGHTBOX MODAL ================= -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <div class="lightbox-content">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <img id="lightboxImg" src="" alt="Enlarged gallery photo">
-            <p class="lightbox-caption" id="lightboxCaption"></p>
-        </div>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
+        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
+        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
+        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
+        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
+        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Portfolio</a></li>
+        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
+        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
+        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      </ul>
     </div>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+    </div>
+  </div>
 
-    <!-- ================= STAGE SPECIFICATIONS ================= -->
-    <section style="padding: 80px 0; background: rgba(5, 11, 36, 0.6); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-        <div class="wrap">
-            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
-                <div class="eyebrow" style="justify-content: center;">Technical Setup</div>
-                <h2 class="section-title">Stage &amp; <em>Equipment Standards</em></h2>
-                <p class="section-sub">We maintain top-tier audio quality for every stage size.</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                <div class="timeline-card reveal">
-                    <h4 style="color: var(--gold); font-size: 1.15rem; margin-bottom: 10px;">🎙️ Vocal Setup</h4>
-                    <p>Sennheiser EW-D / Shure Beta 58A wireless systems with dedicated vocal processors and digital in-ear monitoring (IEM) for crystal-clear pitch control.</p>
-                </div>
-                <div class="timeline-card reveal">
-                    <h4 style="color: var(--gold); font-size: 1.15rem; margin-bottom: 10px;">🎸 Instrument Rig</h4>
-                    <p>Takamine &amp; Taylor electro-acoustic guitars, Nord stage keys, Roland drum percussion pads, and Radial active DI boxes for noise-free signal transmission.</p>
-                </div>
-                <div class="timeline-card reveal">
-                    <h4 style="color: var(--gold); font-size: 1.15rem; margin-bottom: 10px;">🎛️ Digital Console</h4>
-                    <p>Behringer X32 / Allen &amp; Heath SQ series digital mixing consoles with pre-saved scene presets for instant soundcheck efficiency.</p>
-                </div>
-            </div>
-        </div>
+  <main style="padding-top: var(--header-height-desktop);">
+    
+    <!-- PORTFOLIO HERO -->
+    <section class="section" style="padding-bottom: var(--space-4);">
+      <div class="wrap">
+        <span class="eyebrow">Creative Archive</span>
+        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Selected Works & Projects</h1>
+        <p class="section-sub" style="max-width: 680px;">A collection of original compositions, high-profile live concert tours, and studio collaborations.</p>
+      </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="wrap">
-            <a href="index.html" class="logo-brand" style="margin-bottom: 12px;" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 60px; height: 60px;">
-            </a>
-            <p class="tag">"Let's Create Memories Through Music"</p>
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <!-- LARGE PROJECT GRID (2 COLUMNS DESKTOP / 1 COLUMN MOBILE PER PDF) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="portfolio-grid-2col">
+          
+          <!-- Project 1 -->
+          <div class="work-card">
+            <div class="work-card-img-wrap">
+              <img src="vashu-profile.jpg" alt="Ruhaniyat Tour" class="work-card-img">
             </div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+            <div class="work-card-body">
+              <div>
+                <h3 class="work-card-title">Ruhaniyat National Sufi Tour</h3>
+                <span class="work-card-category">Live Performance &bull; 8 Cities</span>
+              </div>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
             </div>
-            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="work-card">
+            <div class="work-card-img-wrap">
+              <img src="vashu-profile.jpg" alt="Banaras Beats" class="work-card-img" style="filter: grayscale(25%);">
+            </div>
+            <div class="work-card-body">
+              <div>
+                <h3 class="work-card-title">Banaras Beats Soundtrack</h3>
+                <span class="work-card-category">Folk Fusion &bull; Original Track</span>
+              </div>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="work-card">
+            <div class="work-card-img-wrap">
+              <img src="vashu-profile.jpg" alt="Sufi Night Gala" class="work-card-img" style="filter: sepia(15%);">
+            </div>
+            <div class="work-card-body">
+              <div>
+                <h3 class="work-card-title">Royal Heritage Gala Concert</h3>
+                <span class="work-card-category">Acoustic Concert &bull; Udaipur</span>
+              </div>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="work-card">
+            <div class="work-card-img-wrap">
+              <img src="vashu-profile.jpg" alt="Commercial OST" class="work-card-img">
+            </div>
+            <div class="work-card-body">
+              <div>
+                <h3 class="work-card-title">Echoes of the Valley OST</h3>
+                <span class="work-card-category">Film Score &bull; Studio Production</span>
+              </div>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+            </div>
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <div class="totop" id="toTop">↑</div>
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+      <div class="wrap text-center">
+        <h2 class="final-cta-title">Have a creative project in mind?</h2>
+        <p class="final-cta-desc">Let's discuss how original sound design can bring your story to life.</p>
+        <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+      </div>
+    </section>
 
-    <script>
-        const progressBar = document.getElementById('scrollProgress');
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            if (progressBar) progressBar.style.width = scrolled + "%";
-        });
+  </main>
 
-        let isAudioPlaying = false;
-        function toggleGlobalAudio() {
-            const bar = document.getElementById('globalAudioBar');
-            const btn = document.getElementById('globalPlayBtn');
-            isAudioPlaying = !isAudioPlaying;
-            if (isAudioPlaying) {
-                bar.classList.add('playing');
-                btn.textContent = '⏸';
-            } else {
-                bar.classList.remove('playing');
-                btn.textContent = '▶';
-            }
-        }
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid-3col">
+        <div>
+          <h3 class="footer-brand-title">TheMeloFY</h3>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
+          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+        </div>
+      </div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+    </div>
+  </footer>
 
-        const header = document.getElementById('siteHeader');
-        const toTop = document.getElementById('toTop');
-        window.addEventListener('scroll', () => {
-            toTop.classList.toggle('show', window.scrollY > 400);
-        });
-        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  <script>
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
 
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-        });
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const drawerClose = document.getElementById('drawerClose');
 
-        const revealEls = document.querySelectorAll('.reveal');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('in');
-                    io.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach((el, i) => {
-            el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
-            io.observe(el);
-        });
-
-        // Gallery Filter
-        function filterGallery(category, ev) {
-            const buttons = document.querySelectorAll('.gallery-filters .filter-btn');
-            buttons.forEach(b => b.classList.remove('active'));
-            if (ev && ev.target) ev.target.classList.add('active');
-
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach(item => {
-                if (category === 'all' || item.dataset.cat === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // Lightbox functions
-        function openLightbox(imgSrc, caption) {
-            document.getElementById('lightboxImg').src = imgSrc;
-            document.getElementById('lightboxCaption').textContent = caption;
-            document.getElementById('lightboxModal').classList.add('active');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightboxModal').classList.remove('active');
-        }
-    </script>
+    function openMenu() { drawer.classList.add('active'); overlay.classList.add('active'); }
+    function closeMenu() { drawer.classList.remove('active'); overlay.classList.remove('active'); }
+    if (burger) burger.addEventListener('click', openMenu);
+    if (drawerClose) drawerClose.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+  </script>
 </body>
-
 </html>
