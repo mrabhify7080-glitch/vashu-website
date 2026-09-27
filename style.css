@@ -953,30 +953,28 @@ header.scrolled .logo-img {
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(212, 175, 55, 0.1);
 }
 
-/* Artist Profile Photo */
-.profile-photo-wrap {
-    width: 160px;
-    height: 160px;
+/* Artist Profile Avatar Emblem */
+.profile-avatar-icon {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    margin: 0 auto 8px;
-    padding: 4px;
-    background: linear-gradient(135deg, var(--gold-soft), var(--gold), var(--gold-dim));
-    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
-    position: relative;
+    margin: 0 auto 16px;
+    background: radial-gradient(circle at 35% 35%, rgba(212, 175, 55, 0.25), rgba(5, 11, 36, 0.95));
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    color: var(--gold);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.25), inset 0 0 25px rgba(212, 175, 55, 0.15);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.profile-card:hover .profile-photo-wrap {
-    box-shadow: 0 8px 48px rgba(212, 175, 55, 0.5);
-    transform: scale(1.03);
-}
-
-.profile-photo-wrap img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
+.profile-card:hover .profile-avatar-icon {
+    transform: scale(1.06) rotate(3deg);
+    box-shadow: 0 12px 48px rgba(212, 175, 55, 0.5), inset 0 0 30px rgba(212, 175, 55, 0.3);
+    border-color: #ffd700;
+    color: #ffffff;
 }
 
 .profile-inner h3 {
@@ -1773,49 +1771,57 @@ footer::before {
     position: relative;
     border-radius: 18px;
     overflow: hidden;
-    height: 260px;
+    height: 220px;
     border: 1px solid var(--glass-border);
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(2, 4, 15, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(16, 26, 68, 0.5), rgba(5, 11, 36, 0.95));
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    justify-content: space-between;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
+.gallery-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold-border);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.2);
+    background: linear-gradient(145deg, rgba(25, 40, 100, 0.6), rgba(5, 11, 36, 0.98));
 }
 
-.gallery-overlay h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+.gallery-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--gold);
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover .gallery-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(212, 175, 55, 0.25);
     color: #ffffff;
-    margin-bottom: 4px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-.gallery-overlay p {
-    font-size: 0.78rem;
+.gallery-card-info h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.gallery-card-info span {
+    font-size: 0.82rem;
     color: var(--gold-soft);
+    display: block;
 }
 
 /* ==========================================================================
@@ -2652,8 +2658,9 @@ a:focus-visible {
         max-width: 100%;
     }
 
-    .profile-photo-wrap {
-        width: 130px;
-        height: 130px;
+    .profile-avatar-icon {
+        width: 120px;
+        height: 120px;
+        font-size: 2.6rem;
     }
 }
