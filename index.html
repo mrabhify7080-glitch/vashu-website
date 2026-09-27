@@ -42,6 +42,8 @@
 
     <!-- ================= HERO ================= -->
     <section class="hero" id="home">
+        <!-- Floating Gold Particles -->
+        <div class="hero-particles" id="heroParticles"></div>
         <div class="hero-bars" id="heroBars"></div>
         <div class="hero-content">
             <div class="hero-kicker">TheMeloFY Presents</div>
@@ -54,8 +56,9 @@
                 <a href="contact.html" class="btn btn-outline">✦ Book Live Show</a>
             </div>
         </div>
-        <div class="scroll-cue">
+        <div class="scroll-cue" id="scrollCue">
             <span>Scroll</span>
+            <span class="chevron"></span>
             <div class="line"></div>
         </div>
     </section>
@@ -170,8 +173,8 @@
             </div>
             <div class="profile-card reveal">
                 <div class="profile-inner">
-                    <div class="profile-img-wrap" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(5, 11, 36, 0.9) 70%); border-radius: 20px; padding: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" style="width: 140px; height: 140px; object-fit: contain; filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.5));">
+                    <div class="profile-photo-wrap">
+                        <img src="vashu-profile.jpg" alt="Vashu — Singer, Composer & Music Producer" loading="lazy">
                     </div>
                     <h3>VASHU</h3>
                     <span class="role">Indie Artist • Songwriter • Music Producer</span>
@@ -412,21 +415,39 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="wrap">
-            <a href="index.html" class="logo-brand" style="margin-bottom: 16px; justify-content: center;" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 85px; height: 85px; max-height: 85px; filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.7));">
-            </a>
-            <p class="tag">"Let's Create Memories Through Music"</p>
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <div class="footer-grid">
+                <!-- Left: Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
+                        <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 85px; height: 85px; max-height: 85px; filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.7));">
+                    </a>
+                    <p class="tag">"Let's Create Memories<br>Through Music"</p>
+                </div>
+
+                <!-- Center: Quick Links -->
+                <div class="footer-links-section">
+                    <div class="footer-links-title">Quick Links</div>
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
+                        <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+                        <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Right: Social -->
+                <div class="footer-social-section">
+                    <div class="footer-links-title">Follow Us</div>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+                        <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+                        <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
             </div>
-            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
         </div>
     </footer>
 
@@ -479,6 +500,29 @@
             }
         }
 
+        // ================= FLOATING GOLD PARTICLES =================
+        const particlesContainer = document.getElementById('heroParticles');
+        if (particlesContainer) {
+            const particleCount = 25;
+            for (let i = 0; i < particleCount; i++) {
+                const p = document.createElement('span');
+                const size = 2 + Math.random() * 5;
+                const duration = 6 + Math.random() * 10;
+                const delay = Math.random() * 12;
+                const left = Math.random() * 100;
+                const peakOpacity = 0.2 + Math.random() * 0.4;
+                p.style.cssText = `
+                    --size: ${size}px;
+                    --duration: ${duration}s;
+                    --delay: ${delay}s;
+                    --peak-opacity: ${peakOpacity};
+                    left: ${left}%;
+                    bottom: -20px;
+                `;
+                particlesContainer.appendChild(p);
+            }
+        }
+
         // Scroll reveal animation
         const revealEls = document.querySelectorAll('.reveal');
         const io = new IntersectionObserver((entries) => {
@@ -494,7 +538,17 @@
             io.observe(el);
         });
 
-        // ================= INTERACTIVE MUSIC PLAYER =================
+        // Scroll cue fade on scroll
+        const scrollCue = document.getElementById('scrollCue');
+        if (scrollCue) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    scrollCue.classList.add('hidden');
+                } else {
+                    scrollCue.classList.remove('hidden');
+                }
+            });
+        }
         const tracksData = [
             { title: "Ruhaniyat (रूहानियत)", genre: "Sufi Pop Fusion", freq: 440 },
             { title: "Banaras Beats (बनारस बीट्स)", genre: "Indie Folk Fusion", freq: 523 },
