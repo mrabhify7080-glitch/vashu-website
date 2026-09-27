@@ -1,364 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music & Compositions — Vashu | TheMeloFY</title>
-    <meta name="description"
-        content="Explore Vashu's discography — Original Sufi Pop singles, Indie Folk Fusion, Acoustic Romance, and Rock Ballads. Stream tracks, read song stories and lyrics.">
-    <meta property="og:title" content="Music & Compositions — Vashu | TheMeloFY">
-    <meta property="og:description" content="Explore Vashu's discography — Original Sufi Pop, Indie Folk Fusion, and Acoustic Ballads.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=15">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music & Discography — Vashu | TheMeloFY</title>
+  <meta name="description" content="Listen to original compositions, singles, and live studio performances by Vashu. Stream on Spotify, Apple Music, and YouTube.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="scrollProgress"></div>
 
-    <!-- ================= NAV ================= -->
-    <header id="siteHeader" class="scrolled">
-        <nav class="wrap">
-            <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="music.html" class="active">Music</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger" id="burger"><span></span><span></span><span></span></div>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header id="siteHeader">
+    <nav class="wrap">
+      <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
+      </a>
 
-    <!-- ================= PAGE HEADER ================= -->
-    <section class="page-header">
-        <div class="wrap">
-            <div class="eyebrow">Discography &amp; Releases</div>
-            <h1 class="section-title">Original <em>Music</em></h1>
-            <p class="section-sub" style="margin: 0 auto;">Every track tells a story. Immerse yourself in Vashu's signature soundscapes across genres.</p>
-        </div>
-    </section>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html" class="active">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-    <!-- ================= MUSIC SHOWCASE ================= -->
-    <section style="padding: 50px 0 90px;">
-        <div class="wrap">
-            <!-- Genre Filter Tabs -->
-            <div class="gallery-filters reveal">
-                <button class="filter-btn active" onclick="filterMusic('all')">All Releases</button>
-                <button class="filter-btn" onclick="filterMusic('sufi')">Sufi &amp; Devotional</button>
-                <button class="filter-btn" onclick="filterMusic('pop')">Pop &amp; Acoustic</button>
-                <button class="filter-btn" onclick="filterMusic('rock')">Rock &amp; Metal</button>
-                <button class="filter-btn" onclick="filterMusic('fusion')">Folk Fusion</button>
-            </div>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+      </div>
 
-            <!-- Music Cards Grid -->
-            <div class="music-showcase-grid">
+      <div class="burger" id="burger" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
 
-                <!-- Track 1 -->
-                <div class="track-card reveal" data-genre="sufi">
-                    <div>
-                        <div class="track-header">
-                            <span class="track-tag">Sufi Pop Fusion</span>
-                            <span class="track-date">Released: Jan 2026</span>
-                        </div>
-                        <h3 class="track-title">Ruhaniyat (रूहानियत)</h3>
-                        <p class="track-story">Composed late at night in Vashu's Banaras studio, <em>Ruhaniyat</em> explores spiritual longing and unrequited soul connection. Melding traditional harmonium notes with ambient pad textures and soaring vocal alaps, this track has become a fan-favorite for quiet reflection.</p>
-                    </div>
-
-                    <div>
-                        <div class="track-player">
-                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Ruhaniyat">▶</button>
-                            <div class="waveform-container">
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="track-footer">
-                            <div class="track-links">
-                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
-                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
-                            </div>
-                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Ruhaniyat', 'तेरे इश्क़ की रूहानियत में बह गया दिल...\nहर सांस में तेरा नाम, हर धड़कन में तेरी बात।\nबनारस की शामों सा सुहाना ये समां,\nतेरी यादों से महका ये मेरा जहां।')">Lyrics 📜</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Track 2 -->
-                <div class="track-card reveal" data-genre="fusion">
-                    <div>
-                        <div class="track-header">
-                            <span class="track-tag">Indie Folk Fusion</span>
-                            <span class="track-date">Released: Nov 2025</span>
-                        </div>
-                        <h3 class="track-title">Banaras Beats (बनारस बीट्स)</h3>
-                        <p class="track-story">A tribute to Vashu's hometown, combining rhythm patterns sampled directly from the Assi Ghat morning aarti with acoustic guitar arpeggios and modern basslines. <em>Banaras Beats</em> brings the mystic energy of the ancient city into contemporary streaming playlists.</p>
-                    </div>
-
-                    <div>
-                        <div class="track-player">
-                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Banaras Beats">▶</button>
-                            <div class="waveform-container">
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="track-footer">
-                            <div class="track-links">
-                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
-                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
-                            </div>
-                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Banaras Beats', 'घाटों की गूंज में, गंगा की मौजों में...\nबसा है संगीत, मेरी हर सोच में।\nबनारस की गलियां गाती हैं तराना,\nमस्त मलंग हुआ ये दिल परवाना।')">Lyrics 📜</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Track 3 -->
-                <div class="track-card reveal" data-genre="pop">
-                    <div>
-                        <div class="track-header">
-                            <span class="track-tag">Acoustic Pop Romance</span>
-                            <span class="track-date">Released: Aug 2025</span>
-                        </div>
-                        <h3 class="track-title">Pehli Baarish (पहली बारिश)</h3>
-                        <p class="track-story">A warm acoustic ballade evoking the smell of petrichor and nostalgic first rain moments. Featuring layered string harmonies, subtle percussive shakers, and intimate vocal delivery, <em>Pehli Baarish</em> has resonated strongly with lovers of romantic unplugged melodies.</p>
-                    </div>
-
-                    <div>
-                        <div class="track-player">
-                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Pehli Baarish">▶</button>
-                            <div class="waveform-container">
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="track-footer">
-                            <div class="track-links">
-                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
-                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
-                            </div>
-                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Pehli Baarish', 'पहली बारिश की बूंदों सा तेरा अहसास,\nजब भी तू होती है मेरे दिल के पास।\nभीग जाने दो इस इश्क़ की राहों में,\nसो जाने दो तेरी हिफ़ाज़त की बाहों में।')">Lyrics 📜</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Track 4 -->
-                <div class="track-card reveal" data-genre="rock">
-                    <div>
-                        <div class="track-header">
-                            <span class="track-tag">Rock &amp; Metal Anthem</span>
-                            <span class="track-date">Released: May 2025</span>
-                        </div>
-                        <h3 class="track-title">Aagahi (आगाही - The Awakening)</h3>
-                        <p class="track-story">Demonstrating Vashu's vocal power and range, <em>Aagahi</em> is a heavy rock anthem driven by distorted guitar riffs, thunderous drum fills, and soaring high octave belts. Written as a call for self-realization and overcoming inner struggles.</p>
-                    </div>
-
-                    <div>
-                        <div class="track-player">
-                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Aagahi">▶</button>
-                            <div class="waveform-container">
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="track-footer">
-                            <div class="track-links">
-                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
-                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
-                            </div>
-                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Aagahi', 'तू उठ, तू जाग, ये समां तेरा है!\nतूफ़ानों से टकराना ही काम तेरा है।\nअंधेरों को चीर कर रौशनी लाएगा,\nतभी तो तू आगाही की मिसाल बनाएगा!')">Lyrics 📜</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Track 5 -->
-                <div class="track-card reveal" data-genre="pop">
-                    <div>
-                        <div class="track-header">
-                            <span class="track-tag">Bollywood Reimagined</span>
-                            <span class="track-date">Released: Mar 2025</span>
-                        </div>
-                        <h3 class="track-title">Tum Ho Pass (Acoustic Redux)</h3>
-                        <p class="track-story">A soulful acoustic cover and re-imagination of iconic Bollywood melodies, crafted with nylon string guitars, ambient violin overlays, and soft falsetto vocals. A staple highlight of Vashu's unplugged live show setlists.</p>
-                    </div>
-
-                    <div>
-                        <div class="track-player">
-                            <button class="play-btn" onclick="togglePlay(this)" aria-label="Play Tum Ho Pass">▶</button>
-                            <div class="waveform-container">
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                                <div class="waveform-bar"></div><div class="waveform-bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="track-footer">
-                            <div class="track-links">
-                                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener">▶ YouTube</a>
-                                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener">◎ Instagram</a>
-                            </div>
-                            <button class="btn btn-outline small" style="padding: 4px 12px; font-size: 0.75rem;" onclick="showLyrics('Tum Ho Pass', 'तुम हो पास तो सब कुछ हसीन है...\nइस दिल को तुझ पर ही यक़ीन है।\nगूंजती है तेरी धड़कन मेरी रूह में,\nजैसे कोई दुआ बसी हो सुजूद में।')">Lyrics 📜</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= LYRICS MODAL ================= -->
-    <div class="lightbox-modal" id="lyricsModal">
-        <div class="lightbox-content" style="max-width: 600px; background: var(--navy-deep); padding: 40px; border-radius: 16px; border: 1px solid var(--gold); text-align: left;">
-            <span class="lightbox-close" onclick="closeLyrics()">&times;</span>
-            <h3 id="lyricsTitle" style="color: var(--gold); font-size: 1.6rem; margin-bottom: 20px;">Track Title</h3>
-            <pre id="lyricsBody" style="white-space: pre-wrap; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: var(--white); line-height: 1.8; opacity: 0.9;"></pre>
-        </div>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
+        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
+        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
+        <li><a href="music.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Music</a></li>
+        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
+        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
+        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
+        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
+        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      </ul>
     </div>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+    </div>
+  </div>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="wrap">
-            <a href="index.html" class="logo-brand" style="margin-bottom: 12px;" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 60px; height: 60px;">
-            </a>
-            <p class="tag">"Let's Create Memories Through Music"</p>
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-            </div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
-            </div>
-            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
+  <main style="padding-top: var(--header-height-desktop);">
+    
+    <!-- COMPACT MUSIC HERO -->
+    <section class="section" style="padding-bottom: var(--space-4);">
+      <div class="wrap">
+        <span class="eyebrow">Discography</span>
+        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Listen To Original Releases</h1>
+        <p class="section-sub" style="max-width: 680px;">Stream signature Sufi pop, indie acoustic, and cinematic fusion tracks composed and sung by Vashu.</p>
+      </div>
+    </section>
+
+    <!-- FEATURED TRACK PLAYER (CLEAN / SIMPLIFIED PER PDF) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
+        
+        <div class="music-player-card">
+          <div class="music-art-circle" id="vinylDisc">VM</div>
+          <div style="flex: 1;">
+            <span class="eyebrow" id="activeTrackGenre">Sufi Pop Fusion</span>
+            <h3 style="font-size: 1.5rem; color: var(--cream); margin-bottom: 0.5rem;" id="activeTrackTitle">Ruhaniyat (रूहानियत)</h3>
+            <p style="font-size: 0.9rem; color: var(--body-on-dark);">Original composition, lyrics and vocals by Vashu.</p>
+          </div>
+          <div>
+            <button class="btn btn-gold" id="mainPlayBtn" onclick="togglePlay()">▶ Play Track</button>
+          </div>
         </div>
-    </footer>
 
-    <div class="totop" id="toTop">↑</div>
+        <!-- TRACK LIST AS CLEAN ROWS (1px DIVIDER, NO CARDS) -->
+        <div class="section-header" style="margin-top: var(--space-6);">
+          <span class="eyebrow">All Tracks</span>
+          <h2 class="section-title">Selected Soundtracks</h2>
+        </div>
 
-    <script>
-        const progressBar = document.getElementById('scrollProgress');
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            if (progressBar) progressBar.style.width = scrolled + "%";
-        });
+        <div class="tracks-list-clean">
+          
+          <!-- Row 1 -->
+          <div class="track-row active" onclick="selectSong(0, 'Ruhaniyat (रूहानियत)', 'Sufi Pop Fusion')">
+            <span class="track-row-num">01</span>
+            <div class="track-row-title">
+              <h4>Ruhaniyat (रूहानियत)</h4>
+              <span class="track-row-tag">Original Single &bull; Hindi/Urdu</span>
+            </div>
+            <span class="track-row-tag">Sufi Pop</span>
+            <span class="track-row-dur">3:45</span>
+            <button class="track-play-btn" title="Play">▶</button>
+          </div>
 
-        let isAudioPlaying = false;
-        function toggleGlobalAudio() {
-            const bar = document.getElementById('globalAudioBar');
-            const btn = document.getElementById('globalPlayBtn');
-            isAudioPlaying = !isAudioPlaying;
-            if (isAudioPlaying) {
-                bar.classList.add('playing');
-                btn.textContent = '⏸';
-            } else {
-                bar.classList.remove('playing');
-                btn.textContent = '▶';
-            }
-        }
+          <!-- Row 2 -->
+          <div class="track-row" onclick="selectSong(1, 'Banaras Beats (बनारस बीट्स)', 'Indie Folk Fusion')">
+            <span class="track-row-num">02</span>
+            <div class="track-row-title">
+              <h4>Banaras Beats (बनारस बीट्स)</h4>
+              <span class="track-row-tag">Assi Ghat Vibes &bull; Acoustic Fusion</span>
+            </div>
+            <span class="track-row-tag">Indie Folk</span>
+            <span class="track-row-dur">4:12</span>
+            <button class="track-play-btn" title="Play">▶</button>
+          </div>
 
-        const header = document.getElementById('siteHeader');
-        const toTop = document.getElementById('toTop');
-        window.addEventListener('scroll', () => {
-            toTop.classList.toggle('show', window.scrollY > 400);
-        });
-        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+          <!-- Row 3 -->
+          <div class="track-row" onclick="selectSong(2, 'Sufi Reverie (सूफी खयाल)', 'Spiritual Acoustic')">
+            <span class="track-row-num">03</span>
+            <div class="track-row-title">
+              <h4>Sufi Reverie (सूफी खयाल)</h4>
+              <span class="track-row-tag">Meditative Vocal Arrangement</span>
+            </div>
+            <span class="track-row-tag">Devotional</span>
+            <span class="track-row-dur">5:04</span>
+            <button class="track-play-btn" title="Play">▶</button>
+          </div>
 
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-        });
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+          <!-- Row 4 -->
+          <div class="track-row" onclick="selectSong(3, 'Midnight Ragas (मध्यरात्रि राग)', 'Classical Contemporary')">
+            <span class="track-row-num">04</span>
+            <div class="track-row-title">
+              <h4>Midnight Ragas (मध्यरात्रि राग)</h4>
+              <span class="track-row-tag">Late Night Studio Session</span>
+            </div>
+            <span class="track-row-tag">Ambient Fusion</span>
+            <span class="track-row-dur">4:38</span>
+            <button class="track-play-btn" title="Play">▶</button>
+          </div>
 
-        const revealEls = document.querySelectorAll('.reveal');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('in');
-                    io.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach((el, i) => {
-            el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
-            io.observe(el);
-        });
+        </div>
 
-        // Filter music tracks
-        function filterMusic(category) {
-            const buttons = document.querySelectorAll('.gallery-filters .filter-btn');
-            buttons.forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
+        <!-- STREAMING PLATFORMS ROW -->
+        <div style="margin-top: var(--space-8); padding: var(--space-4); background-color: var(--bg-surface); border-radius: var(--radius-card); border: 1px solid var(--gold-border-dark); text-align: center;">
+          <h4 style="font-family: var(--font-sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-primary); margin-bottom: 1rem;">Available On Global Streaming Platforms</h4>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://spotify.com" class="social-pill" target="_blank" rel="noopener">Spotify</a>
+            <a href="https://music.apple.com" class="social-pill" target="_blank" rel="noopener">Apple Music</a>
+            <a href="https://youtube.com" class="social-pill" target="_blank" rel="noopener">YouTube Music</a>
+            <a href="https://soundcloud.com" class="social-pill" target="_blank" rel="noopener">SoundCloud</a>
+            <a href="https://amazon.com" class="social-pill" target="_blank" rel="noopener">Amazon Music</a>
+          </div>
+        </div>
 
-            const cards = document.querySelectorAll('.track-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.genre === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
+      </div>
+    </section>
 
-        // Toggle play simulation
-        function togglePlay(btn) {
-            const card = btn.closest('.track-card');
-            const isPlaying = card.classList.contains('playing');
-            
-            document.querySelectorAll('.track-card').forEach(c => {
-                c.classList.remove('playing');
-                c.querySelector('.play-btn').textContent = '▶';
-            });
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+      <div class="wrap text-center">
+        <h2 class="final-cta-title">Need custom composition for your project?</h2>
+        <p class="final-cta-desc">Vashu composes original soundtracks for films, commercials, and digital releases.</p>
+        <a href="contact.html" class="btn btn-gold">Commission a Track</a>
+      </div>
+    </section>
 
-            if (!isPlaying) {
-                card.classList.add('playing');
-                btn.textContent = '⏸';
-            }
-        }
+  </main>
 
-        // Lyrics modal
-        function showLyrics(title, text) {
-            document.getElementById('lyricsTitle').textContent = title;
-            document.getElementById('lyricsBody').textContent = text;
-            document.getElementById('lyricsModal').classList.add('active');
-        }
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid-3col">
+        <div>
+          <h3 class="footer-brand-title">TheMeloFY</h3>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
+          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+        </div>
+      </div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+    </div>
+  </footer>
 
-        function closeLyrics() {
-            document.getElementById('lyricsModal').classList.remove('active');
-        }
-    </script>
+  <script>
+    let isPlaying = false;
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      const btn = document.getElementById('mainPlayBtn');
+      btn.textContent = isPlaying ? '⏸ Pause' : '▶ Play Track';
+    }
+
+    function selectSong(idx, title, genre) {
+      document.querySelectorAll('.track-row').forEach(r => r.classList.remove('active'));
+      const rows = document.querySelectorAll('.track-row');
+      if (rows[idx]) rows[idx].classList.add('active');
+
+      document.getElementById('activeTrackTitle').textContent = title;
+      document.getElementById('activeTrackGenre').textContent = genre;
+      isPlaying = true;
+      document.getElementById('mainPlayBtn').textContent = '⏸ Pause';
+    }
+
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const drawerClose = document.getElementById('drawerClose');
+
+    function openMenu() { drawer.classList.add('active'); overlay.classList.add('active'); }
+    function closeMenu() { drawer.classList.remove('active'); overlay.classList.remove('active'); }
+    if (burger) burger.addEventListener('click', openMenu);
+    if (drawerClose) drawerClose.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+  </script>
 </body>
-
 </html>
