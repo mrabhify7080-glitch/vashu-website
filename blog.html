@@ -1,217 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & News — Vashu | Behind The Scenes, Music Tips & Stories</title>
-    <meta name="description"
-        content="Read Vashu's official blog — Behind the scenes of track compositions, music production tips for independent artists, stories from Varanasi, and live stage insights.">
-    <meta property="og:title" content="Blog & News — Vashu | Behind The Scenes & Stories">
-    <meta property="og:description" content="Music production tips, behind the scenes track breakdowns, and stories from Vashu.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=7">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal & Musical Insights — Vashu | TheMeloFY</title>
+  <meta name="description" content="Read articles on the art of Sufi music, live performance psychology, and studio music production by Vashu.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="scrollProgress"></div>
 
-    <!-- ================= NAV ================= -->
-    <header id="siteHeader" class="scrolled">
-        <nav class="wrap">
-            <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger" id="burger"><span></span><span></span><span></span></div>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header id="siteHeader">
+    <nav class="wrap">
+      <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
+      </a>
 
-    <!-- ================= PAGE HEADER ================= -->
-    <section class="page-header">
-        <div class="wrap">
-            <div class="eyebrow">Insights &amp; Stories</div>
-            <h1 class="section-title">Blog &amp; <em>News</em></h1>
-            <p class="section-sub" style="margin: 0 auto;">Behind the scenes, studio breakdowns, music tips, and personal reflections from Vashu.</p>
-        </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+      </div>
+
+      <div class="burger" id="burger" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
+        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+      </div>
+      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
+        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
+        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
+        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
+        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
+        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
+        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Blog</a></li>
+        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--header-height-desktop);">
+    
+    <!-- BLOG HERO -->
+    <section class="section" style="padding-bottom: var(--space-4);">
+      <div class="wrap">
+        <span class="eyebrow">The Journal</span>
+        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Thoughts on Melody & Craft</h1>
+        <p class="section-sub" style="max-width: 680px;">Insights from the recording studio, live stage reflections, and the timeless heritage of Indian fusion music.</p>
+      </div>
     </section>
 
-    <!-- ================= BLOG ARTICLES GRID ================= -->
-    <section style="padding: 60px 0 90px;">
-        <div class="wrap">
-            <div class="blog-grid">
-
-                <!-- Article 1 -->
-                <article class="blog-card reveal">
-                    <div class="blog-card-img" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(5, 11, 36, 0.95)); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--gold);">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    <div class="blog-card-content">
-                        <div>
-                            <span class="blog-category">Behind The Song</span>
-                            <h3 class="blog-title">Composing 'Ruhaniyat': Blending Sufi Longing with Studio Pads</h3>
-                            <p class="blog-excerpt">
-                                An insider look into how the track was born in Banaras past midnight. Discover how organic harmonium phrasing was blended with modern digital synthesizers to create a spiritual ambient soundscape.
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <span>📅 Jan 28, 2026</span>
-                            <span>⏱️ 4 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="blog-card reveal">
-                    <div class="blog-card-img" style="background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(5, 11, 36, 0.95)); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #00d2ff;">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                    <div class="blog-card-content">
-                        <div>
-                            <span class="blog-category">Music Production</span>
-                            <h3 class="blog-title">5 Essential Tips for Indie Musicians Building Home Studios</h3>
-                            <p class="blog-excerpt">
-                                You don't need a million-dollar studio to produce professional music. Here are 5 practical acoustics, mic technique, and mixing tips that every independent artist should master.
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <span>📅 Jan 14, 2026</span>
-                            <span>⏱️ 6 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="blog-card reveal">
-                    <div class="blog-card-img" style="background: linear-gradient(135deg, rgba(255, 154, 60, 0.2), rgba(5, 11, 36, 0.95)); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #ff9a3c;">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <div class="blog-card-content">
-                        <div>
-                            <span class="blog-category">Artist Roots</span>
-                            <h3 class="blog-title">Varanasi Vibes: How the Ghats of Banaras Shape My Melody</h3>
-                            <p class="blog-excerpt">
-                                The reverberation of evening aartis, temple bells, and the timeless flow of Ganga river have a profound effect on musical phrasing. Vashu reflects on how growing up in Varanasi dictates his songwriting soul.
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <span>📅 Dec 20, 2025</span>
-                            <span>⏱️ 5 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="blog-card reveal">
-                    <div class="blog-card-img" style="background: linear-gradient(135deg, rgba(235, 87, 87, 0.2), rgba(5, 11, 36, 0.95)); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #eb5757;">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <div class="blog-card-content">
-                        <div>
-                            <span class="blog-category">Live Stage</span>
-                            <h3 class="blog-title">Pre-Show Rituals: Preparing Your Voice for a 2-Hour Live Concert</h3>
-                            <p class="blog-excerpt">
-                                From warm-up vocal sirens and hydration techniques to stage mindset preparation — learn how Vashu protects his voice and keeps energy high across back-to-back live concert tours.
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <span>📅 Nov 05, 2025</span>
-                            <span>⏱️ 5 min read</span>
-                        </div>
-                    </div>
-                </article>
-
+    <!-- FEATURED ARTICLE AT TOP (PER PDF) -->
+    <section class="section" style="padding-top: 0; padding-bottom: var(--space-6);">
+      <div class="wrap">
+        <div class="service-card" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0;">
+          <img src="vashu-profile.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="padding: var(--space-6) var(--space-4); display: flex; flex-direction: column; justify-content: center;">
+            <span class="eyebrow">Featured Story &bull; 6 Min Read</span>
+            <h2 style="font-size: 1.85rem; color: var(--cream); margin-bottom: 1rem;">The Spiritual Geometry of Sufi Melodies</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--body-on-dark);">Exploring how ancient microtonal scales and repetitive melodic phrasing induce meditative emotional resonance in modern concert audiences.</p>
+            <div>
+              <a href="contact.html" class="text-link-arrow">Read Full Story <span class="arrow">&rarr;</span></a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="wrap">
-            <a href="index.html" class="logo-brand" style="margin-bottom: 12px;" aria-label="TheMeloFY Home">
-                <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img" style="width: 60px; height: 60px;">
-            </a>
-            <p class="tag">"Let's Create Memories Through Music"</p>
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@VashuVibes07" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-                <a href="https://www.instagram.com/vashuvibes07" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-                <a href="https://www.facebook.com/share/1DPKRSBQF3/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-            </div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="music.html">Music</a>
-                <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
-            </div>
-            <p class="copyright">© 2026 TheMeloFY · VASHU. All rights reserved.</p>
+    <!-- 2-3 COLUMN ARTICLE GRID (PER PDF) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="services-grid-3col">
+          
+          <!-- Post 1 -->
+          <div class="service-card">
+            <span class="eyebrow" style="font-size: 10px;">Live Music</span>
+            <h3 class="service-title" style="font-size: 1.25rem;">Stage Presence: Connecting Beyond Notes</h3>
+            <p class="service-desc">Why silence and pacing on stage matter as much as technical vocal agility during live concert performances.</p>
+            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Jan 2026</span>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="service-card">
+            <span class="eyebrow" style="font-size: 10px;">Studio Craft</span>
+            <h3 class="service-title" style="font-size: 1.25rem;">Acoustic Layering in Fusion Production</h3>
+            <p class="service-desc">Balancing traditional Sarangi and Tabla harmonics with analog synth pads without muddying the vocal frequency.</p>
+            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Dec 2025</span>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="service-card">
+            <span class="eyebrow" style="font-size: 10px;">Songwriting</span>
+            <h3 class="service-title" style="font-size: 1.25rem;">Finding Original Words for Timeless Longing</h3>
+            <p class="service-desc">How poetic traditions in Braj Bhasha and Urdu continue to guide modern Indian independent songwriting.</p>
+            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Nov 2025</span>
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <div class="totop" id="toTop">↑</div>
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+      <div class="wrap text-center">
+        <h2 class="final-cta-title">Stay Connected</h2>
+        <p class="final-cta-desc">Follow Vashu on social media for behind-the-scenes recording sessions and new track announcements.</p>
+        <a href="contact.html" class="btn btn-gold">Join Community</a>
+      </div>
+    </section>
 
-    <script>
-        const progressBar = document.getElementById('scrollProgress');
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            if (progressBar) progressBar.style.width = scrolled + "%";
-        });
+  </main>
 
-        let isAudioPlaying = false;
-        function toggleGlobalAudio() {
-            const bar = document.getElementById('globalAudioBar');
-            const btn = document.getElementById('globalPlayBtn');
-            isAudioPlaying = !isAudioPlaying;
-            if (isAudioPlaying) {
-                bar.classList.add('playing');
-                btn.textContent = '⏸';
-            } else {
-                bar.classList.remove('playing');
-                btn.textContent = '▶';
-            }
-        }
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid-3col">
+        <div>
+          <h3 class="footer-brand-title">TheMeloFY</h3>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
+          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+        </div>
+      </div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+    </div>
+  </footer>
 
-        const header = document.getElementById('siteHeader');
-        const toTop = document.getElementById('toTop');
-        window.addEventListener('scroll', () => {
-            toTop.classList.toggle('show', window.scrollY > 400);
-        });
-        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  <script>
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
 
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-        });
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const drawerClose = document.getElementById('drawerClose');
 
-        const revealEls = document.querySelectorAll('.reveal');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('in');
-                    io.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach((el, i) => {
-            el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
-            io.observe(el);
-        });
-    </script>
+    function openMenu() { drawer.classList.add('active'); overlay.classList.add('active'); }
+    function closeMenu() { drawer.classList.remove('active'); overlay.classList.remove('active'); }
+    if (burger) burger.addEventListener('click', openMenu);
+    if (drawerClose) drawerClose.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+  </script>
 </body>
-
 </html>
