@@ -534,8 +534,7 @@
 
     // Subtle Luxury Mouse Parallax on Hero Section (Desktop only)
     const heroSection = document.getElementById('home');
-    const sunDisc = document.querySelector('.gold-sun-disc');
-    const orbitalLines = document.querySelector('.gold-orbital-lines');
+    const artworkWrap = document.querySelector('.hero-gold-artwork');
     const portraitWrap = document.querySelector('.portrait-photo-wrapper');
 
     if (heroSection && window.matchMedia('(min-width: 1025px)').matches) {
@@ -559,14 +558,11 @@
         mouseX += (targetX - mouseX) * 0.06;
         mouseY += (targetY - mouseY) * 0.06;
 
-        if (sunDisc) {
-          sunDisc.style.transform = `translate3d(${-mouseX * 0.7}px, ${-mouseY * 0.7}px, 0)`;
-        }
-        if (orbitalLines) {
-          orbitalLines.style.transform = `translate3d(${mouseX * 0.5}px, ${mouseY * 0.5}px, 0)`;
+        if (artworkWrap) {
+          artworkWrap.style.transform = `translate3d(${-mouseX * 0.4}px, ${-mouseY * 0.4}px, 0)`;
         }
         if (portraitWrap) {
-          portraitWrap.style.transform = `scale(1.15) translate3d(${mouseX * 0.35}px, ${mouseY * 0.25}px, 0)`;
+          portraitWrap.style.transform = `scale(1.15) translate3d(${mouseX * 0.25}px, ${mouseY * 0.2}px, 0)`;
         }
 
         requestAnimationFrame(animateParallax);
