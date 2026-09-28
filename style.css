@@ -406,15 +406,23 @@ p {
   right: 0;
   z-index: 1000;
   height: var(--header-height-desktop);
+  background-color: rgba(9, 9, 13, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--gold-border-dark);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* On Homepage top hero, header blends seamlessly */
+body.home-page #siteHeader:not(.scrolled) {
   background-color: transparent;
-  transition: background-color var(--transition-normal), border-color var(--transition-normal), backdrop-filter var(--transition-normal);
   border-bottom: 1px solid transparent;
 }
 
 #siteHeader.scrolled, .header.scrolled {
-  background-color: rgba(9, 9, 13, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background-color: rgba(9, 9, 13, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--gold-border-dark);
 }
 
@@ -437,6 +445,7 @@ p {
   display: flex;
   align-items: center;
   gap: var(--space-1);
+  flex-shrink: 0;
 }
 
 .logo-img {
@@ -453,12 +462,14 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  justify-content: center;
+  gap: clamp(1rem, 1.8vw, 2.25rem);
+  white-space: nowrap;
 }
 
 .nav-links li a {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -491,6 +502,7 @@ p {
 .header-cta {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 /* Mobile Hamburger */
@@ -575,6 +587,119 @@ p {
 .mobile-drawer-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* --------------------------------------------------------------------------
+   6.1. GLOBAL INNER PAGE HERO / BANNER
+   -------------------------------------------------------------------------- */
+.page-hero {
+  padding-top: calc(var(--header-height-desktop) + 40px);
+  padding-bottom: var(--space-6);
+  background: radial-gradient(circle at 50% -30%, rgba(201, 162, 74, 0.12) 0%, rgba(10, 10, 20, 0) 70%), #08080A;
+  border-bottom: 1px solid var(--gold-border-dark);
+  position: relative;
+}
+
+.page-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 4.2vw, 3.2rem);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.page-hero-sub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--body-on-dark);
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   6.2. GALLERY LIGHTBOX MODAL
+   -------------------------------------------------------------------------- */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(5, 5, 8, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 24px;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img-wrap {
+  position: relative;
+  max-width: 900px;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--gold-border-dark);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-caption {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--cream);
+  margin-top: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 18, 28, 0.8);
+  border: 1px solid var(--gold-border-dark);
+  color: var(--cream);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  background: var(--gold-primary);
+  color: #0A0A0E;
+  border-color: var(--gold-primary);
+  transform: scale(1.08);
 }
 
 /* --------------------------------------------------------------------------
