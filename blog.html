@@ -6,38 +6,44 @@
   <title>Journal & Musical Insights — Vashu | TheMeloFY</title>
   <meta name="description" content="Read articles on the art of Sufi music, live performance psychology, and studio music production by Vashu.">
   
+  <!-- Google Fonts: Cinzel + Playfair Display + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header id="siteHeader">
-    <nav class="wrap">
+    <nav class="wrap header-nav-wrap">
       <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
         <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
       </a>
 
+      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="blog.html" class="active">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
+      <!-- Header CTA -->
       <div class="header-cta">
-        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+        <a href="contact.html" class="btn btn-header-talk">LET'S TALK <span class="cta-arrow">&rarr;</span></a>
       </div>
 
-      <div class="burger" id="burger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
+      <!-- Mobile Burger -->
+      <div class="burger" id="burger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   </header>
@@ -47,45 +53,48 @@
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
-        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 36px;">
+        <button id="drawerClose" style="font-size: 1.6rem; color: var(--cream);">&times;</button>
       </div>
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
-        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
-        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
-        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
-        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
-        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Blog</a></li>
-        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div style="margin-top: 2rem;">
-      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">LET'S TALK &rarr;</a>
     </div>
   </div>
 
-  <main style="padding-top: var(--header-height-desktop);">
+  <main>
     
-    <!-- BLOG HERO -->
-    <section class="section" style="padding-bottom: var(--space-4);">
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero">
       <div class="wrap">
-        <span class="eyebrow">The Journal</span>
-        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Thoughts on Melody & Craft</h1>
-        <p class="section-sub" style="max-width: 680px;">Insights from the recording studio, live stage reflections, and the timeless heritage of Indian fusion music.</p>
+        <div class="page-hero-badge">
+          <span class="kicker-gold-bar" aria-hidden="true"></span>
+          <span class="eyebrow">THE JOURNAL &amp; ESSAYS</span>
+        </div>
+        <h1 class="page-hero-title">Thoughts on Melody &amp; Craft</h1>
+        <p class="page-hero-sub">Insights from the recording studio, live stage reflections, and the timeless heritage of Indian fusion music.</p>
       </div>
     </section>
 
-    <!-- FEATURED ARTICLE AT TOP (PER PDF) -->
-    <section class="section" style="padding-top: 0; padding-bottom: var(--space-6);">
+    <!-- FEATURED ARTICLE -->
+    <section class="section" style="padding-bottom: var(--space-4);">
       <div class="wrap">
         <div class="service-card" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1.1fr; gap: 0;">
-          <img src="vashu-profile.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
-          <div style="padding: var(--space-6) var(--space-4); display: flex; flex-direction: column; justify-content: center;">
+          <img src="vashu-profile.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover; min-height: 320px;">
+          <div style="padding: var(--space-6) var(--space-5); display: flex; flex-direction: column; justify-content: center;">
             <span class="eyebrow">Featured Story &bull; 6 Min Read</span>
-            <h2 style="font-size: 1.85rem; color: var(--cream); margin-bottom: 1rem;">The Spiritual Geometry of Sufi Melodies</h2>
-            <p style="margin-bottom: 1.5rem; color: var(--body-on-dark);">Exploring how ancient microtonal scales and repetitive melodic phrasing induce meditative emotional resonance in modern concert audiences.</p>
+            <h2 style="font-size: clamp(1.6rem, 2.4vw, 2.1rem); color: var(--cream); margin-bottom: 1rem; line-height: 1.25;">The Spiritual Geometry of Sufi Melodies</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--body-on-dark); line-height: 1.65;">Exploring how ancient microtonal scales and repetitive melodic phrasing induce meditative emotional resonance in modern concert audiences.</p>
             <div>
               <a href="contact.html" class="text-link-arrow">Read Full Story <span class="arrow">&rarr;</span></a>
             </div>
@@ -94,33 +103,48 @@
       </div>
     </section>
 
-    <!-- 2-3 COLUMN ARTICLE GRID (PER PDF) -->
+    <!-- 3-COLUMN ARTICLE GRID -->
     <section class="section" style="padding-top: 0;">
       <div class="wrap">
         <div class="services-grid-3col">
           
           <!-- Post 1 -->
           <div class="service-card">
-            <span class="eyebrow" style="font-size: 10px;">Live Music</span>
-            <h3 class="service-title" style="font-size: 1.25rem;">Stage Presence: Connecting Beyond Notes</h3>
-            <p class="service-desc">Why silence and pacing on stage matter as much as technical vocal agility during live concert performances.</p>
-            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Jan 2026</span>
+            <div>
+              <span class="eyebrow" style="font-size: 10px;">Live Performance</span>
+              <h3 class="service-title" style="font-size: 1.25rem;">Stage Presence: Connecting Beyond Notes</h3>
+              <p class="service-desc">Why silence and pacing on stage matter as much as technical vocal agility during live concert performances.</p>
+            </div>
+            <div style="padding-top: 12px; border-top: 1px solid var(--gold-border-dark); margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; color: var(--gold-primary); font-weight: 600;">Jan 2026</span>
+              <a href="contact.html" class="text-link-arrow" style="font-size: 11px;">Read &rarr;</a>
+            </div>
           </div>
 
           <!-- Post 2 -->
           <div class="service-card">
-            <span class="eyebrow" style="font-size: 10px;">Studio Craft</span>
-            <h3 class="service-title" style="font-size: 1.25rem;">Acoustic Layering in Fusion Production</h3>
-            <p class="service-desc">Balancing traditional Sarangi and Tabla harmonics with analog synth pads without muddying the vocal frequency.</p>
-            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Dec 2025</span>
+            <div>
+              <span class="eyebrow" style="font-size: 10px;">Studio Craft</span>
+              <h3 class="service-title" style="font-size: 1.25rem;">Acoustic Layering in Fusion Production</h3>
+              <p class="service-desc">Balancing traditional Sarangi and Tabla harmonics with analog synth pads without muddying the vocal frequency.</p>
+            </div>
+            <div style="padding-top: 12px; border-top: 1px solid var(--gold-border-dark); margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; color: var(--gold-primary); font-weight: 600;">Dec 2025</span>
+              <a href="contact.html" class="text-link-arrow" style="font-size: 11px;">Read &rarr;</a>
+            </div>
           </div>
 
           <!-- Post 3 -->
           <div class="service-card">
-            <span class="eyebrow" style="font-size: 10px;">Songwriting</span>
-            <h3 class="service-title" style="font-size: 1.25rem;">Finding Original Words for Timeless Longing</h3>
-            <p class="service-desc">How poetic traditions in Braj Bhasha and Urdu continue to guide modern Indian independent songwriting.</p>
-            <span style="font-size: 12px; color: var(--gold-primary); font-weight: 600;">Published Nov 2025</span>
+            <div>
+              <span class="eyebrow" style="font-size: 10px;">Songwriting</span>
+              <h3 class="service-title" style="font-size: 1.25rem;">Finding Original Words for Timeless Longing</h3>
+              <p class="service-desc">How poetic traditions in Braj Bhasha and Urdu continue to guide modern Indian independent songwriting.</p>
+            </div>
+            <div style="padding-top: 12px; border-top: 1px solid var(--gold-border-dark); margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; color: var(--gold-primary); font-weight: 600;">Nov 2025</span>
+              <a href="contact.html" class="text-link-arrow" style="font-size: 11px;">Read &rarr;</a>
+            </div>
           </div>
 
         </div>
@@ -130,9 +154,9 @@
     <!-- FINAL CTA -->
     <section class="final-cta-section">
       <div class="wrap text-center">
-        <h2 class="final-cta-title">Stay Connected</h2>
+        <h2 class="final-cta-title">Stay Connected With The Journey</h2>
         <p class="final-cta-desc">Follow Vashu on social media for behind-the-scenes recording sessions and new track announcements.</p>
-        <a href="contact.html" class="btn btn-gold">Join Community</a>
+        <a href="contact.html" class="btn btn-gold">Join Community &rarr;</a>
       </div>
     </section>
 
@@ -144,7 +168,12 @@
       <div class="footer-grid-3col">
         <div>
           <h3 class="footer-brand-title">TheMeloFY</h3>
-          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer &amp; Music Producer. Where Melody Meets Soul.</p>
+          <div class="footer-social-links" style="margin-top: 1rem;">
+            <a href="https://instagram.com" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com" class="social-pill" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://spotify.com" class="social-pill" target="_blank" rel="noopener">Spotify</a>
+          </div>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -154,16 +183,19 @@
             <li><a href="music.html">Music</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
-          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+          <h4 class="footer-heading">Direct Inquiries</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;"><a href="mailto:contact@themelofy.com" style="color: var(--gold-primary);">contact@themelofy.com</a></p>
+          <p style="font-size: 12.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Response time: within 24–48 hours for booking and press inquiries.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Book A Session &rarr;</a>
         </div>
       </div>
-      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved. Designed with intention &amp; soul.</div>
     </div>
   </footer>
 
