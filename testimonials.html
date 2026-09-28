@@ -6,38 +6,44 @@
   <title>Client Words & Reviews — Vashu | TheMeloFY</title>
   <meta name="description" content="Read reviews and testimonials from festival curators, event organizers, and directors who have worked with Vashu.">
   
+  <!-- Google Fonts: Cinzel + Playfair Display + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header id="siteHeader">
-    <nav class="wrap">
+    <nav class="wrap header-nav-wrap">
       <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
         <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
       </a>
 
+      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
+      <!-- Header CTA -->
       <div class="header-cta">
-        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+        <a href="contact.html" class="btn btn-header-talk">LET'S TALK <span class="cta-arrow">&rarr;</span></a>
       </div>
 
-      <div class="burger" id="burger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
+      <!-- Mobile Burger -->
+      <div class="burger" id="burger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   </header>
@@ -47,42 +53,45 @@
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
-        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 36px;">
+        <button id="drawerClose" style="font-size: 1.6rem; color: var(--cream);">&times;</button>
       </div>
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
-        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
-        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
-        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
-        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
-        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
-        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div style="margin-top: 2rem;">
-      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">LET'S TALK &rarr;</a>
     </div>
   </div>
 
-  <main style="padding-top: var(--header-height-desktop);">
+  <main>
     
-    <!-- TESTIMONIALS HERO -->
-    <section class="section" style="padding-bottom: var(--space-4);">
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero">
       <div class="wrap">
-        <span class="eyebrow">Endorsements</span>
-        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">What Organizers & Clients Say</h1>
-        <p class="section-sub" style="max-width: 680px;">Real feedback from event directors, festival organizers, and creative collaborators.</p>
+        <div class="page-hero-badge">
+          <span class="kicker-gold-bar" aria-hidden="true"></span>
+          <span class="eyebrow">ENDORSEMENTS &amp; FEEDBACK</span>
+        </div>
+        <h1 class="page-hero-title">What Organizers &amp; Clients Say</h1>
+        <p class="page-hero-sub">Authentic impressions from festival curators, event directors, and creative collaborators who have worked with Vashu.</p>
       </div>
     </section>
 
-    <!-- ONE LARGE FEATURED TESTIMONIAL (PER PDF) -->
-    <section class="section" style="padding-top: 0; padding-bottom: var(--space-6);">
+    <!-- ONE LARGE FEATURED TESTIMONIAL -->
+    <section class="section" style="padding-bottom: var(--space-6);">
       <div class="wrap">
         <div class="testimonial-featured-box">
           <p class="quote-serif">
-            "Vashu brought an electrifying yet profoundly soulful atmosphere to our annual cultural festival. His ability to connect with a crowd of over 3,000 attendees and make each song feel personal is extraordinary."
+            &ldquo;Vashu brought an electrifying yet profoundly soulful atmosphere to our annual cultural festival. His ability to connect with a crowd of over 3,000 attendees and make each song feel personal is extraordinary.&rdquo;
           </p>
           <div class="quote-author">Vikramaditya Rathore</div>
           <div class="quote-context">Festival Producer &bull; Jaipur Heritage Fest</div>
@@ -90,7 +99,7 @@
       </div>
     </section>
 
-    <!-- 2-COLUMN QUOTE GRID BELOW (FLAT CARDS, THIN BORDER PER PDF) -->
+    <!-- 2-COLUMN QUOTE GRID -->
     <section class="section" style="padding-top: 0;">
       <div class="wrap">
         <div class="portfolio-grid-2col">
@@ -98,21 +107,21 @@
           <!-- Quote 1 -->
           <div class="service-card">
             <p style="font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.6; margin-bottom: 1.25rem;">
-              "The bespoke music score Vashu created for our corporate anthem became the highlight of our global leadership summit. Pristine audio engineering and deep emotional depth."
+              &ldquo;The bespoke music score Vashu created for our corporate anthem became the highlight of our global leadership summit. Pristine audio engineering and deep emotional depth.&rdquo;
             </p>
             <div>
               <h4 style="font-family: var(--font-sans); font-size: 13px; font-weight: 700; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1px;">Meera Sengupta</h4>
-              <span style="font-size: 12px; color: var(--body-on-dark);">Head of Brand & Communications, Nexa Media</span>
+              <span style="font-size: 12px; color: var(--body-on-dark);">Head of Brand &amp; Communications, Nexa Media</span>
             </div>
           </div>
 
           <!-- Quote 2 -->
           <div class="service-card">
             <p style="font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.6; margin-bottom: 1.25rem;">
-              "For our destination wedding in Udaipur, Vashu curated a 90-minute acoustic Sufi set that left every single guest in awe. Unforgettable memories created through pure melody."
+              &ldquo;For our destination wedding in Udaipur, Vashu curated a 90-minute acoustic Sufi set that left every single guest in awe. Unforgettable memories created through pure melody.&rdquo;
             </p>
             <div>
-              <h4 style="font-family: var(--font-sans); font-size: 13px; font-weight: 700; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1px;">Rohan & Tanya Mehta</h4>
+              <h4 style="font-family: var(--font-sans); font-size: 13px; font-weight: 700; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1px;">Rohan &amp; Tanya Mehta</h4>
               <span style="font-size: 12px; color: var(--body-on-dark);">Private Wedding &bull; Udaipur</span>
             </div>
           </div>
@@ -126,7 +135,7 @@
       <div class="wrap text-center">
         <h2 class="final-cta-title">Ready to book an unforgettable experience?</h2>
         <p class="final-cta-desc">Inquire today to reserve dates for your upcoming concert, corporate summit, or private celebration.</p>
-        <a href="contact.html" class="btn btn-gold">Inquire For Dates</a>
+        <a href="contact.html" class="btn btn-gold">Inquire For Dates &rarr;</a>
       </div>
     </section>
 
@@ -138,7 +147,12 @@
       <div class="footer-grid-3col">
         <div>
           <h3 class="footer-brand-title">TheMeloFY</h3>
-          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer &amp; Music Producer. Where Melody Meets Soul.</p>
+          <div class="footer-social-links" style="margin-top: 1rem;">
+            <a href="https://instagram.com" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com" class="social-pill" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://spotify.com" class="social-pill" target="_blank" rel="noopener">Spotify</a>
+          </div>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -148,16 +162,19 @@
             <li><a href="music.html">Music</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
-          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+          <h4 class="footer-heading">Direct Inquiries</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;"><a href="mailto:contact@themelofy.com" style="color: var(--gold-primary);">contact@themelofy.com</a></p>
+          <p style="font-size: 12.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Response time: within 24–48 hours for booking and press inquiries.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Book A Session &rarr;</a>
         </div>
       </div>
-      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved. Designed with intention &amp; soul.</div>
     </div>
   </footer>
 
