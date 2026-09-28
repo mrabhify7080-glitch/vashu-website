@@ -290,8 +290,18 @@
     const overlay = document.getElementById('drawerOverlay');
     const drawerClose = document.getElementById('drawerClose');
 
-    function openMenu() { drawer.classList.add('active'); overlay.classList.add('active'); }
-    function closeMenu() { drawer.classList.remove('active'); overlay.classList.remove('active'); }
+    function openMenu() {
+      drawer.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      drawer.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
     if (burger) burger.addEventListener('click', openMenu);
     if (drawerClose) drawerClose.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', closeMenu);
