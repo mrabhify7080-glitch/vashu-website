@@ -6,10 +6,10 @@
   <title>TheMeloFY — VASHU | Singer • Composer • Music Producer</title>
   <meta name="description" content="TheMeloFY — The official artist brand of VASHU. Singer, Composer, Music Producer & Songwriter. Where Melody Meets Soul. Original songs, live concerts, and studio productions.">
   
-  <!-- Google Fonts: Playfair Display + Poppins -->
+  <!-- Google Fonts: Cinzel + Playfair Display + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -18,26 +18,26 @@
 
   <!-- ================= HEADER / NAVBAR ================= -->
   <header id="siteHeader">
-    <nav class="wrap">
+    <nav class="wrap header-nav-wrap">
       <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
         <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
       </a>
 
       <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
       <!-- Header CTA -->
       <div class="header-cta">
-        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+        <a href="contact.html" class="btn btn-header-talk">LET'S TALK <span class="cta-arrow">&rarr;</span></a>
       </div>
 
       <!-- Mobile Burger -->
@@ -54,63 +54,180 @@
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
-        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 36px;">
+        <button id="drawerClose" style="font-size: 1.6rem; color: var(--cream);">&times;</button>
       </div>
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <li><a href="index.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Home</a></li>
-        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
-        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
-        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
-        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
-        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
-        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div style="margin-top: 2rem;">
-      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">LET'S TALK &rarr;</a>
     </div>
   </div>
 
   <main>
-    <!-- ================= HERO SECTION (EDITORIAL / STUDIO HYBRID) ================= -->
+    <!-- ================= HERO SECTION (EDITORIAL CINEMATIC) ================= -->
     <section class="hero" id="home">
-      <div class="wrap">
+      <!-- Ambient Background Atmosphere -->
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+      <div class="wrap hero-wrap">
         <div class="hero-grid">
           
+          <!-- Left Column: Editorial Hierarchy -->
           <div class="hero-content">
-            <span class="hero-kicker">Creative Music & Digital Experience</span>
-            <h1 class="hero-name">VASHU</h1>
-            <div class="hero-role">Singer &bull; Composer &bull; Music Producer</div>
+            <div class="hero-kicker-badge">
+              <span class="kicker-gold-bar" aria-hidden="true"></span>
+              <span class="hero-kicker-text">CREATIVE MUSIC &amp; DIGITAL EXPERIENCE</span>
+            </div>
             
-            <h2 class="hero-headline">Music that turns emotion into memory</h2>
+            <h1 class="hero-name">
+              <span class="vashu-base">VASH</span><span class="vashu-accent">U</span>
+            </h1>
+            
+            <div class="hero-role">SINGER &bull; COMPOSER &bull; MUSIC PRODUCER</div>
+            
+            <div class="hero-gold-separator" aria-hidden="true"></div>
+            
+            <h2 class="hero-headline">Music that turns<br>emotion into memory</h2>
+            
             <p class="hero-desc">
-              Original songs, live performances and studio productions — crafted with intention, delivered with soul.
+              Original songs, live performances and studio productions &mdash; crafted with intention, delivered with soul.
             </p>
 
             <div class="hero-ctas">
-              <a href="portfolio.html" class="btn btn-gold">View Work</a>
-              <a href="music.html" class="btn btn-outline">Listen</a>
+              <a href="portfolio.html" class="btn btn-hero-gold">VIEW WORK <span class="arrow">&rarr;</span></a>
+              <a href="music.html" class="btn btn-hero-listen">
+                <span class="listen-icon-circle">
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor">
+                    <polygon points="1,1 9,6 1,11"/>
+                  </svg>
+                </span>
+                <span>LISTEN</span>
+              </a>
             </div>
           </div>
 
-          <div class="hero-portrait-wrap">
-            <img src="vashu-profile.jpg" alt="Vashu — Singer, Composer & Music Producer" class="hero-portrait-img">
+          <!-- Right Column: Editorial Portrait with Custom Gold Geometric Artwork -->
+          <div class="hero-portrait-stage">
+            <!-- Background Gold Geometric Disc & Subtle Orbital Lines -->
+            <div class="hero-gold-artwork" aria-hidden="true">
+              <div class="gold-sun-disc"></div>
+              <svg class="gold-orbital-lines" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Large outer orbital arc -->
+                <circle cx="340" cy="280" r="235" stroke="url(#heroGoldGrad1)" stroke-width="1.2" stroke-opacity="0.45"/>
+                <!-- Inner orbital accent -->
+                <circle cx="340" cy="280" r="165" stroke="url(#heroGoldGrad2)" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+                <!-- Thin vertical tangent axis line -->
+                <line x1="290" y1="20" x2="290" y2="580" stroke="url(#heroGoldGrad3)" stroke-width="0.75" stroke-opacity="0.25"/>
+                
+                <defs>
+                  <linearGradient id="heroGoldGrad1" x1="110" y1="50" x2="570" y2="510" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.8"/>
+                    <stop offset="50%" stop-color="#8E6E2E" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.05"/>
+                  </linearGradient>
+                  <linearGradient id="heroGoldGrad2" x1="180" y1="120" x2="500" y2="440" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#E8DCC0" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#6B5020" stop-opacity="0.1"/>
+                  </linearGradient>
+                  <linearGradient id="heroGoldGrad3" x1="290" y1="20" x2="290" y2="580" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#C9A24A" stop-opacity="0"/>
+                    <stop offset="30%" stop-color="#C9A24A" stop-opacity="0.4"/>
+                    <stop offset="70%" stop-color="#C9A24A" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#C9A24A" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Original Transparent Black & White Vashu Portrait Cutout -->
+            <div class="portrait-photo-wrapper">
+              <img src="vashu-hero-cutout.png" alt="Vashu — Singer, Composer & Music Producer" class="hero-vashu-img" loading="eager">
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ================= TRUST STRIP ================= -->
-    <section class="trust-strip">
-      <div class="wrap">
-        <div class="trust-strip-grid">
-          <div class="trust-item"><span class="trust-item-dot"></span><span>8+ Music Genres</span></div>
-          <div class="trust-item"><span class="trust-item-dot"></span><span>Independent Artist</span></div>
-          <div class="trust-item"><span class="trust-item-dot"></span><span>360° Studio Production</span></div>
-          <div class="trust-item"><span class="trust-item-dot"></span><span>Live Concerts & Events</span></div>
+    <!-- ================= BOTTOM LUXURY CREDENTIAL STRIP ================= -->
+    <section class="trust-strip" id="trustStrip">
+      <div class="wrap trust-wrap">
+        <div class="trust-cards-grid">
+          
+          <!-- Card 1: Music Genres -->
+          <div class="trust-card">
+            <div class="trust-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 2a10 10 0 0 1 10 10"></path>
+              </svg>
+            </div>
+            <div class="trust-card-info">
+              <div class="trust-card-title">8+ MUSIC GENRES</div>
+              <div class="trust-card-sub">Sufi • Bollywood • Indie Fusion</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Independent Artist -->
+          <div class="trust-card">
+            <div class="trust-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="trust-card-info">
+              <div class="trust-card-title">INDEPENDENT ARTIST</div>
+              <div class="trust-card-sub">100% Original Vision &amp; Soul</div>
+            </div>
+          </div>
+
+          <!-- Card 3: 360 Studio Production -->
+          <div class="trust-card">
+            <div class="trust-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <circle cx="4" cy="12" r="2"></circle>
+                <circle cx="12" cy="10" r="2"></circle>
+                <circle cx="20" cy="14" r="2"></circle>
+              </svg>
+            </div>
+            <div class="trust-card-info">
+              <div class="trust-card-title">360° STUDIO PRODUCTION</div>
+              <div class="trust-card-sub">Compose • Arrange • Master</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Live Concerts -->
+          <div class="trust-card">
+            <div class="trust-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+              </svg>
+            </div>
+            <div class="trust-card-info">
+              <div class="trust-card-title">LIVE CONCERTS &amp; EVENTS</div>
+              <div class="trust-card-sub">Festivals • Galas • Live Tours</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -414,6 +531,48 @@
     if (burger) burger.addEventListener('click', openMenu);
     if (drawerClose) drawerClose.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', closeMenu);
+
+    // Subtle Luxury Mouse Parallax on Hero Section (Desktop only)
+    const heroSection = document.getElementById('home');
+    const sunDisc = document.querySelector('.gold-sun-disc');
+    const orbitalLines = document.querySelector('.gold-orbital-lines');
+    const portraitWrap = document.querySelector('.portrait-photo-wrapper');
+
+    if (heroSection && window.matchMedia('(min-width: 1025px)').matches) {
+      let mouseX = 0, mouseY = 0;
+      let targetX = 0, targetY = 0;
+
+      heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        targetX = x * 20;
+        targetY = y * 18;
+      });
+
+      heroSection.addEventListener('mouseleave', () => {
+        targetX = 0;
+        targetY = 0;
+      });
+
+      function animateParallax() {
+        mouseX += (targetX - mouseX) * 0.06;
+        mouseY += (targetY - mouseY) * 0.06;
+
+        if (sunDisc) {
+          sunDisc.style.transform = `translate3d(${-mouseX * 0.7}px, ${-mouseY * 0.7}px, 0)`;
+        }
+        if (orbitalLines) {
+          orbitalLines.style.transform = `translate3d(${mouseX * 0.5}px, ${mouseY * 0.5}px, 0)`;
+        }
+        if (portraitWrap) {
+          portraitWrap.style.transform = `scale(1.15) translate3d(${mouseX * 0.35}px, ${mouseY * 0.25}px, 0)`;
+        }
+
+        requestAnimationFrame(animateParallax);
+      }
+      animateParallax();
+    }
   </script>
 </body>
 </html>
