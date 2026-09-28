@@ -6,38 +6,44 @@
   <title>Portfolio & Projects — Vashu | TheMeloFY</title>
   <meta name="description" content="Explore selected music projects, live concert showcases, and soundtrack compositions by Vashu.">
   
+  <!-- Google Fonts: Cinzel + Playfair Display + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header id="siteHeader">
-    <nav class="wrap">
+    <nav class="wrap header-nav-wrap">
       <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
         <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
       </a>
 
+      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html" class="active">PORTFOLIO</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
+      <!-- Header CTA -->
       <div class="header-cta">
-        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+        <a href="contact.html" class="btn btn-header-talk">LET'S TALK <span class="cta-arrow">&rarr;</span></a>
       </div>
 
-      <div class="burger" id="burger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
+      <!-- Mobile Burger -->
+      <div class="burger" id="burger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   </header>
@@ -47,94 +53,97 @@
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
-        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 36px;">
+        <button id="drawerClose" style="font-size: 1.6rem; color: var(--cream);">&times;</button>
       </div>
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
-        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
-        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
-        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
-        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--gold-primary); font-weight: 600;">Portfolio</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
-        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
-        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div style="margin-top: 2rem;">
-      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">LET'S TALK &rarr;</a>
     </div>
   </div>
 
-  <main style="padding-top: var(--header-height-desktop);">
+  <main>
     
-    <!-- PORTFOLIO HERO -->
-    <section class="section" style="padding-bottom: var(--space-4);">
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero">
       <div class="wrap">
-        <span class="eyebrow">Creative Archive</span>
-        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Selected Works & Projects</h1>
-        <p class="section-sub" style="max-width: 680px;">A collection of original compositions, high-profile live concert tours, and studio collaborations.</p>
+        <div class="page-hero-badge">
+          <span class="kicker-gold-bar" aria-hidden="true"></span>
+          <span class="eyebrow">CREATIVE ARCHIVE &amp; CASE STUDIES</span>
+        </div>
+        <h1 class="page-hero-title">Selected Works &amp; Projects</h1>
+        <p class="page-hero-sub">A curated collection of original compositions, high-profile live concert tours, and studio soundtrack collaborations.</p>
       </div>
     </section>
 
-    <!-- LARGE PROJECT GRID (2 COLUMNS DESKTOP / 1 COLUMN MOBILE PER PDF) -->
-    <section class="section" style="padding-top: 0;">
+    <!-- LARGE PROJECT GRID (2 COLUMNS DESKTOP) -->
+    <section class="section">
       <div class="wrap">
         <div class="portfolio-grid-2col">
           
           <!-- Project 1 -->
           <div class="work-card">
             <div class="work-card-img-wrap">
-              <img src="vashu-profile.jpg" alt="Ruhaniyat Tour" class="work-card-img">
+              <img src="vashu-profile.jpg" alt="Ruhaniyat National Sufi Tour" class="work-card-img">
             </div>
             <div class="work-card-body">
               <div>
                 <h3 class="work-card-title">Ruhaniyat National Sufi Tour</h3>
-                <span class="work-card-category">Live Performance &bull; 8 Cities</span>
+                <span class="work-card-category">Live Performance &bull; 8 Major Cities</span>
               </div>
-              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
             </div>
           </div>
 
           <!-- Project 2 -->
           <div class="work-card">
             <div class="work-card-img-wrap">
-              <img src="vashu-profile.jpg" alt="Banaras Beats" class="work-card-img" style="filter: grayscale(25%);">
+              <img src="vashu-profile.jpg" alt="Banaras Beats Soundtrack" class="work-card-img" style="filter: grayscale(20%);">
             </div>
             <div class="work-card-body">
               <div>
                 <h3 class="work-card-title">Banaras Beats Soundtrack</h3>
-                <span class="work-card-category">Folk Fusion &bull; Original Track</span>
+                <span class="work-card-category">Folk Fusion &bull; Studio Release</span>
               </div>
-              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
             </div>
           </div>
 
           <!-- Project 3 -->
           <div class="work-card">
             <div class="work-card-img-wrap">
-              <img src="vashu-profile.jpg" alt="Sufi Night Gala" class="work-card-img" style="filter: sepia(15%);">
+              <img src="vashu-profile.jpg" alt="Royal Heritage Gala Concert" class="work-card-img" style="filter: sepia(12%);">
             </div>
             <div class="work-card-body">
               <div>
                 <h3 class="work-card-title">Royal Heritage Gala Concert</h3>
-                <span class="work-card-category">Acoustic Concert &bull; Udaipur</span>
+                <span class="work-card-category">Acoustic Concert &bull; Udaipur Palace</span>
               </div>
-              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
             </div>
           </div>
 
           <!-- Project 4 -->
           <div class="work-card">
             <div class="work-card-img-wrap">
-              <img src="vashu-profile.jpg" alt="Commercial OST" class="work-card-img">
+              <img src="vashu-profile.jpg" alt="Echoes of the Valley OST" class="work-card-img">
             </div>
             <div class="work-card-body">
               <div>
                 <h3 class="work-card-title">Echoes of the Valley OST</h3>
-                <span class="work-card-category">Film Score &bull; Studio Production</span>
+                <span class="work-card-category">Original Film Score &bull; Studio Master</span>
               </div>
-              <a href="music.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="music.html" class="btn btn-outline btn-sm">Explore &rarr;</a>
             </div>
           </div>
 
@@ -146,8 +155,8 @@
     <section class="final-cta-section">
       <div class="wrap text-center">
         <h2 class="final-cta-title">Have a creative project in mind?</h2>
-        <p class="final-cta-desc">Let's discuss how original sound design can bring your story to life.</p>
-        <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+        <p class="final-cta-desc">Let's discuss how original sound design can bring your cinematic story or event to life.</p>
+        <a href="contact.html" class="btn btn-gold">Start a Conversation &rarr;</a>
       </div>
     </section>
 
@@ -159,7 +168,12 @@
       <div class="footer-grid-3col">
         <div>
           <h3 class="footer-brand-title">TheMeloFY</h3>
-          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer &amp; Music Producer. Where Melody Meets Soul.</p>
+          <div class="footer-social-links" style="margin-top: 1rem;">
+            <a href="https://instagram.com" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com" class="social-pill" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://spotify.com" class="social-pill" target="_blank" rel="noopener">Spotify</a>
+          </div>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -169,16 +183,19 @@
             <li><a href="music.html">Music</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
-          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+          <h4 class="footer-heading">Direct Inquiries</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;"><a href="mailto:contact@themelofy.com" style="color: var(--gold-primary);">contact@themelofy.com</a></p>
+          <p style="font-size: 12.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Response time: within 24–48 hours for booking and press inquiries.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Book A Session &rarr;</a>
         </div>
       </div>
-      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved. Designed with intention &amp; soul.</div>
     </div>
   </footer>
 
