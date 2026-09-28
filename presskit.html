@@ -6,38 +6,44 @@
   <title>Official Press Kit & Media Assets — Vashu | TheMeloFY</title>
   <meta name="description" content="Official press kit for Vashu (TheMeloFY). Download high-resolution media photos, artist bios, logo pack, and booking one-sheet.">
   
+  <!-- Google Fonts: Cinzel + Playfair Display + Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header id="siteHeader">
-    <nav class="wrap">
+    <nav class="wrap header-nav-wrap">
       <a href="index.html" class="logo-brand" aria-label="TheMeloFY Home">
         <img src="themelofy-logo-transparent.png" alt="TheMeloFY Logo" class="logo-img">
       </a>
 
+      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
+      <!-- Header CTA -->
       <div class="header-cta">
-        <a href="contact.html" class="btn btn-gold btn-sm">Let's Talk</a>
+        <a href="contact.html" class="btn btn-header-talk">LET'S TALK <span class="cta-arrow">&rarr;</span></a>
       </div>
 
-      <div class="burger" id="burger" aria-label="Toggle Navigation">
-        <span></span><span></span><span></span>
+      <!-- Mobile Burger -->
+      <div class="burger" id="burger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   </header>
@@ -47,56 +53,59 @@
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 32px;">
-        <button id="drawerClose" style="font-size: 1.5rem; color: var(--cream);">&times;</button>
+        <img src="themelofy-logo-transparent.png" alt="TheMeloFY" style="height: 36px;">
+        <button id="drawerClose" style="font-size: 1.6rem; color: var(--cream);">&times;</button>
       </div>
-      <ul style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <li><a href="index.html" style="font-size: 1.1rem; color: var(--cream);">Home</a></li>
-        <li><a href="about.html" style="font-size: 1.1rem; color: var(--cream);">About</a></li>
-        <li><a href="music.html" style="font-size: 1.1rem; color: var(--cream);">Music</a></li>
-        <li><a href="services.html" style="font-size: 1.1rem; color: var(--cream);">Services</a></li>
-        <li><a href="portfolio.html" style="font-size: 1.1rem; color: var(--cream);">Portfolio</a></li>
-        <li><a href="gallery.html" style="font-size: 1.1rem; color: var(--cream);">Gallery</a></li>
-        <li><a href="blog.html" style="font-size: 1.1rem; color: var(--cream);">Blog</a></li>
-        <li><a href="contact.html" style="font-size: 1.1rem; color: var(--cream);">Contact</a></li>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div style="margin-top: 2rem;">
-      <a href="contact.html" class="btn btn-gold" style="width: 100%;">Book a Session</a>
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;">LET'S TALK &rarr;</a>
     </div>
   </div>
 
-  <main style="padding-top: var(--header-height-desktop);">
+  <main>
     
-    <!-- PRESS KIT HERO -->
-    <section class="section" style="padding-bottom: var(--space-4);">
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero">
       <div class="wrap">
-        <span class="eyebrow">Media & Press Kit</span>
-        <h1 style="font-size: 2.75rem; margin-bottom: var(--space-2);">Official Press Assets</h1>
-        <p class="section-sub" style="max-width: 680px;">High-resolution promotional photos, authorized artist biographies, and technical riders for media publications and event curators.</p>
+        <div class="page-hero-badge">
+          <span class="kicker-gold-bar" aria-hidden="true"></span>
+          <span class="eyebrow">MEDIA &amp; PRESS KIT</span>
+        </div>
+        <h1 class="page-hero-title">Official Press Assets</h1>
+        <p class="page-hero-sub">High-resolution promotional photos, authorized artist biographies, and technical riders for media publications and event curators.</p>
       </div>
     </section>
 
-    <!-- PROFESSIONAL SUMMARY BLOCK (SHORT + LONG BIO PER PDF) -->
-    <section class="section" style="padding-top: 0;">
+    <!-- PROFESSIONAL SUMMARY BLOCK -->
+    <section class="section">
       <div class="wrap">
         
         <div class="service-card" style="margin-bottom: var(--space-6);">
           <span class="eyebrow">Approved Artist Bio</span>
-          <h3 class="service-title">Short Bio (100 Words)</h3>
-          <p class="service-desc" style="margin-bottom: 1.5rem;">
+          <h3 class="service-title" style="margin-bottom: 1rem;">Short Bio (100 Words)</h3>
+          <p class="service-desc" style="margin-bottom: 1.5rem; line-height: 1.7;">
             Vashu (TheMeloFY) is an Indian singer, composer, and music producer whose signature sound fuses rich traditional Sufi sensibilities with modern cinematic acoustic orchestration. Known for his captivating live concert presence and pristine studio productions, Vashu has performed at over 50 major music festivals and private cultural galas nationwide. Under his artist imprint TheMeloFY, he crafts original soundtracks, independent singles, and custom scores.
           </p>
 
-          <h3 class="service-title">Quick Facts & Highlights</h3>
+          <h3 class="service-title" style="margin-bottom: 0.75rem;">Quick Facts &amp; Highlights</h3>
           <ul class="service-bullets">
             <li><strong>Primary Genres:</strong> Sufi Pop Fusion, Indie Folk, Cinematic Soundtrack, Semi-Classical</li>
             <li><strong>Live Formats:</strong> Solo Acoustic, 4-Piece Semi-Acoustic, Full 7-Piece Festival Band</li>
-            <li><strong>Location & Base:</strong> India (Available for Global Touring)</li>
+            <li><strong>Location &amp; Base:</strong> India (Available for Global Touring)</li>
           </ul>
         </div>
 
-        <!-- DOWNLOADABLE ASSETS ROW (PER PDF) -->
+        <!-- DOWNLOADABLE ASSETS ROW -->
         <div class="section-header">
           <span class="eyebrow">Download Center</span>
           <h2 class="section-title">Official Media Kits</h2>
@@ -104,21 +113,21 @@
 
         <div class="services-grid-3col">
           <div class="service-card text-center">
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem;">Logo & Brand Pack</h4>
-            <p style="font-size: 13px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Vector SVG, PNG Transparent & High-Res Identity files.</p>
-            <a href="themelofy-logo-transparent.png" download class="btn btn-outline btn-sm">Download Logo Pack</a>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--cream); margin-bottom: 0.5rem;">Logo &amp; Brand Pack</h4>
+            <p style="font-size: 13.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Vector SVG, PNG Transparent &amp; High-Res Identity files.</p>
+            <a href="themelofy-logo-transparent.png" download class="btn btn-outline btn-sm">Download Logo Pack &rarr;</a>
           </div>
 
           <div class="service-card text-center">
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem;">High-Res Photos</h4>
-            <p style="font-size: 13px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Approved 300DPI press portraits and live stage photography.</p>
-            <a href="vashu-profile.jpg" download class="btn btn-outline btn-sm">Download Photos</a>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--cream); margin-bottom: 0.5rem;">High-Res Photos</h4>
+            <p style="font-size: 13.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Approved 300DPI press portraits and live stage photography.</p>
+            <a href="vashu-profile.jpg" download class="btn btn-outline btn-sm">Download Photos &rarr;</a>
           </div>
 
           <div class="service-card text-center">
-            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem;">One-Sheet & Rider</h4>
-            <p style="font-size: 13px; color: var(--body-on-dark); margin-bottom: 1.25rem;">PDF summary with stage input-output list and technical rider.</p>
-            <a href="contact.html" class="btn btn-gold btn-sm">Request Tech Rider</a>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--cream); margin-bottom: 0.5rem;">One-Sheet &amp; Rider</h4>
+            <p style="font-size: 13.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">PDF summary with stage input-output list and technical rider.</p>
+            <a href="contact.html" class="btn btn-gold btn-sm">Request Tech Rider &rarr;</a>
           </div>
         </div>
 
@@ -128,9 +137,9 @@
     <!-- FINAL CTA -->
     <section class="final-cta-section">
       <div class="wrap text-center">
-        <h2 class="final-cta-title">Direct Press & Interview Inquiries</h2>
+        <h2 class="final-cta-title">Direct Press &amp; Interview Inquiries</h2>
         <p class="final-cta-desc">For editorial coverage, podcast features, or live interview bookings:</p>
-        <a href="contact.html" class="btn btn-gold">Contact Press Team</a>
+        <a href="contact.html" class="btn btn-gold">Contact Press Team &rarr;</a>
       </div>
     </section>
 
@@ -142,7 +151,12 @@
       <div class="footer-grid-3col">
         <div>
           <h3 class="footer-brand-title">TheMeloFY</h3>
-          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer & Music Producer.</p>
+          <p class="footer-tagline">The official artist platform of VASHU — Singer, Composer &amp; Music Producer. Where Melody Meets Soul.</p>
+          <div class="footer-social-links" style="margin-top: 1rem;">
+            <a href="https://instagram.com" class="social-pill" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com" class="social-pill" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://spotify.com" class="social-pill" target="_blank" rel="noopener">Spotify</a>
+          </div>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -152,16 +166,19 @@
             <li><a href="music.html">Music</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;">contact@themelofy.com</p>
-          <p style="font-size: 12px; color: var(--body-on-dark);">Response time: within 24–48 hours</p>
+          <h4 class="footer-heading">Direct Inquiries</h4>
+          <p style="font-size: 15px; color: var(--cream); font-weight: 600; margin-bottom: 0.5rem;"><a href="mailto:contact@themelofy.com" style="color: var(--gold-primary);">contact@themelofy.com</a></p>
+          <p style="font-size: 12.5px; color: var(--body-on-dark); margin-bottom: 1.25rem;">Response time: within 24–48 hours for booking and press inquiries.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Book A Session &rarr;</a>
         </div>
       </div>
-      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved.</div>
+      <div class="footer-copyright-line">&copy; 2026 TheMeloFY &bull; Vashu. All rights reserved. Designed with intention &amp; soul.</div>
     </div>
   </footer>
 
